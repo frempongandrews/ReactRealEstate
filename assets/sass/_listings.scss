@@ -1,0 +1,52 @@
+@import "variables";
+
+header{
+
+  background: $darkpurple;
+  color: white;
+  overflow: auto;
+  font-size: 0.9rem;
+  padding-right: 5%;
+  padding-left: 5%;
+  .logo{
+
+    float: left;
+    padding: 20px 15px;
+
+  }
+
+  nav{
+    float: right;
+
+
+    a{
+      display: inline-block;
+      text-decoration: none;
+      padding: 20px 15px;
+      text-transform: capitalize;
+      color: white;
+
+
+      &:hover{
+        color: $pink;
+      }
+
+    }
+
+    .register-btn{
+      background: $pink;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius: 3px;
+
+      &:hover{
+        color: white;
+      }
+
+    }
+
+  }
+
+
+
+}

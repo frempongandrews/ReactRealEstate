@@ -1,0 +1,386 @@
+@import "variables";
+
+
+#content-area{
+
+  overflow: auto;
+  width: 100%;
+  background-color: black;
+
+}
+
+
+#filter{
+  background: $grey;
+  width: 30%;
+  max-width: 300px;
+  min-width: 200px;
+  display: inline-block;
+  float: left;
+
+  .inside{
+    padding: 20px;
+
+  }
+
+  h4{
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  select{
+
+    background: transparent;
+    padding: 10px;
+    color: #1b1b1b;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 25px;
+    width: 100%;
+
+  }
+
+
+  .filters{
+
+    .title{
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 1rem;
+      color: $darkgrey
+    }
+
+    input[type='text']{
+
+      border-radius: 5px;
+      font-size: 1rem;
+      padding: 0.4rem;
+      display: inline-block;
+      width: 45%;
+      margin-right: 2.5%;
+      margin-bottom: 1rem;
+
+    }
+
+    &.extras{
+
+      label{
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+
+        input[type='checkbox'] {
+          float: right;
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+}
+
+
+#listings{
+
+  display: inline-block;
+  width: 70%;
+  float: left;
+  padding: 15px;
+  background-color: $offwhite;
+
+
+  .search-area{
+
+    input[type='text'] {
+
+      width: 70%;
+      background: transparent;
+      font-size: 2rem;
+      border: none;
+      border-bottom: 2px solid $lightgrey;
+      margin-bottom: 20px;
+      color: $lightgrey;
+      font-weight: 200;
+
+      &:focus{
+
+        outline: none;
+
+      }
+    }
+
+  }
+
+
+
+
+
+  .sortby-area{
+
+    margin-bottom: 20px;
+    //height: 50px;
+
+    .results{
+
+      font-size: 0.8rem;
+      color: $lightgrey;
+      display: inline-block;
+
+    }
+
+  }
+
+  .sort-options{
+
+    float: right;
+
+
+    select{
+      font-size: 0.9rem;
+      font-weight: 300;
+      border: 1px solid $lightgrey;
+      background-color: transparent;
+      padding: 20px;
+      margin-right: 15px;
+      vertical-align: top;
+    }
+
+    .view{
+      display: inline-block;
+
+
+      .fa{
+        font-size: 1.5rem;
+        margin-right: 15px;
+      }
+    }
+
+
+  }
+
+}
+
+
+
+
+
+.listings-results{
+
+  margin-bottom: 40px;
+  .listing{
+
+    //background-color: red;
+    -webkit-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+    -moz-box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+    box-shadow: 0 9px 54px -4px rgba(224, 224, 224, 1);
+    border-radius: 5px;
+    width: 33.33%;
+
+
+
+
+    .listing-img{
+
+      position: relative;
+      color: white;
+      padding: 15px;
+      background: url("https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg") no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      min-height: 200px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-top-left-radius: 5px;
+      -moz-border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
+
+
+      //.the-list-image{
+      //  width: 100%;
+      //  height: 100%;
+      //  background-color: black; /* fallback color */
+      //  //background-image: url("https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg");
+      //  background: url("https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg") no-repeat center center;
+      //  background-position: center;
+      //  background-size: cover;
+      //  transform: scale(1.8);
+      //  min-height: 200px;
+      //}
+
+      .address{
+
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+        font-size: 0.8rem;
+        font-weight: 400;
+
+      }
+
+      .details{
+
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-top-right-radius: 5px;
+        -moz-border-top-left-radius: 5px;
+        -moz-border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        padding: 20px;
+        background: rgba(12,0,43,0.8);
+        background: -moz-linear-gradient(-45deg, rgba(12,0,43,0.8) 0%, rgba(193,70,161,0.8) 0%, rgba(168,0,119,0.8) 0%, rgba(79,50,167,0.8) 61%, rgba(79,50,167,0.8) 100%);
+        background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(12,0,43,0.8)), color-stop(0%, rgba(193,70,161,0.8)), color-stop(0%, rgba(168,0,119,1)), color-stop(61%, rgba(79,50,167,0.8)), color-stop(100%, rgba(79,50,167,0.8)));
+        background: -webkit-linear-gradient(-45deg, rgba(12,0,43,0.8) 0%, rgba(193,70,161,0.8) 0%, rgba(168,0,119,0.8) 0%, rgba(79,50,167,0.8) 61%, rgba(79,50,167,0.8) 100%);
+        background: -o-linear-gradient(-45deg, rgba(12,0,43,0.8) 0%, rgba(193,70,161,0.8) 0%, rgba(168,0,119,0.8) 0%, rgba(79,50,167,0.8) 61%, rgba(79,50,167,0.8) 100%);
+        background: -ms-linear-gradient(-45deg, rgba(12,0,43,0.8) 0%, rgba(193,70,161,0.8) 0%, rgba(168,0,119,0.8) 0%, rgba(79,50,167,0.8) 61%, rgba(79,50,167,0.8) 100%);
+        background: linear-gradient(135deg, rgba(12,0,43,0.8) 0%, rgba(193,70,161,0.8) 0%, rgba(168,0,119,0.8) 0%, rgba(79,50,167,0.8) 61%, rgba(79,50,167,0.8) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /*hiding it to show on hover*/
+        opacity: 0;
+        transition: all 0.5s ease;
+
+      }
+
+      .user-img{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 1px solid white;
+        display: inline-block;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        background: url("https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg") no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+      }
+
+      .user-details{
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 20px;
+
+
+        .user-name{
+          display: block;
+          color: rgba(255,255,255,1);
+          font-size: .9rem;
+          font-weight: 300;
+          margin-bottom: 5px;
+
+        }
+
+        .post-date{
+          display: block;
+          color: rgba(255,255,255,0.7);
+          font-size: 0.8rem;
+        }
+
+      }
+
+      .listing-details{
+        font-size: 0.8rem;
+        text-align: center;
+
+        .floor-space{
+
+        }
+
+        .bedrooms{
+          margin-top: 5px;
+
+          span{
+            padding: 10px;
+          }
+
+        }
+
+      }
+
+      .view-listing-btn{
+
+        margin-top: 10px;
+
+        button{
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          padding: 0;
+
+
+          a{
+
+
+            text-decoration: none;
+            color: white;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 2px;
+
+
+          }
+
+        }
+      }
+
+      &:hover{
+
+        .details{
+          opacity: 1;
+
+
+        }
+
+        .address{
+          opacity: 0;
+        }
+
+      }
+
+    }
+
+
+    .bottom-info{
+
+      font-size: 0.8rem;
+
+      .property-price{
+        display: block;
+        margin: 15px;
+        color: $darkgrey;
+        font-weight: 400;
+      }
+
+      .property-location{
+        display: block;
+        margin: 15px;
+        padding-bottom: 15px;
+        color: $lightgrey;
+        font-weight: 300;
+      }
+
+    }
+
+
+
+
+  }
+
+}
