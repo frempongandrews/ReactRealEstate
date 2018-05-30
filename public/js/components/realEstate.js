@@ -478,6 +478,172 @@ var Listings = function (_Component) {
                 ' London '
               )
             )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'listing' },
+            _react2.default.createElement(
+              'div',
+              { className: 'listing-img' },
+              _react2.default.createElement(
+                'span',
+                { className: 'address' },
+                'Appartment Kleiweg'
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'details' },
+                _react2.default.createElement('div', { className: 'user-img' }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'user-details' },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'user-name' },
+                    'Nina Smith'
+                  ),
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'post-date' },
+                    'Posted on 05/05/18'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'listing-details' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'floor-space' },
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '1000ft\xB2'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'bedrooms' },
+                    _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '3 bedrooms'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'view-listing-btn' },
+                  _react2.default.createElement(
+                    'button',
+                    null,
+                    _react2.default.createElement(
+                      'a',
+                      { href: '#' },
+                      'View listing'
+                    )
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'bottom-info' },
+              _react2.default.createElement(
+                'span',
+                { className: 'property-price' },
+                '$1000 / month '
+              ),
+              _react2.default.createElement(
+                'span',
+                { className: 'property-location' },
+                _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
+                ' London '
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'listing' },
+            _react2.default.createElement(
+              'div',
+              { className: 'listing-img' },
+              _react2.default.createElement(
+                'span',
+                { className: 'address' },
+                'Appartment Kleiweg'
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'details' },
+                _react2.default.createElement('div', { className: 'user-img' }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'user-details' },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'user-name' },
+                    'Nina Smith'
+                  ),
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'post-date' },
+                    'Posted on 05/05/18'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'listing-details' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'floor-space' },
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '1000ft\xB2'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'bedrooms' },
+                    _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '3 bedrooms'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'view-listing-btn' },
+                  _react2.default.createElement(
+                    'button',
+                    null,
+                    _react2.default.createElement(
+                      'a',
+                      { href: '#' },
+                      'View listing'
+                    )
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'bottom-info' },
+              _react2.default.createElement(
+                'span',
+                { className: 'property-price' },
+                '$1000 / month '
+              ),
+              _react2.default.createElement(
+                'span',
+                { className: 'property-location' },
+                _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
+                ' London '
+              )
+            )
           )
         ),
         _react2.default.createElement(
@@ -485,7 +651,7 @@ var Listings = function (_Component) {
           { className: 'pagination' },
           _react2.default.createElement(
             'ul',
-            { className: 'pagination-nums' },
+            { className: 'pages' },
             _react2.default.createElement(
               'li',
               null,
@@ -493,7 +659,7 @@ var Listings = function (_Component) {
             ),
             _react2.default.createElement(
               'li',
-              null,
+              { className: 'active-page' },
               '1'
             ),
             _react2.default.createElement(
