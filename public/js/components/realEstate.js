@@ -1,6 +1,65 @@
 webpackJsonp([0],{
 
-/***/ 101:
+/***/ 100:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var listings = [{
+  image: 'https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg',
+  address: '20-34 grand ave',
+  city: 'Ridgewood',
+  state: 'NY',
+  rooms: 3,
+  price: 220000,
+  floorSpace: 2000,
+  extras: ['elevator', 'gym'],
+  homeType: 'Apartment'
+
+}, {
+  image: 'http://thaivillageaf.com/wp-content/uploads/modern-apartment-bedroom-brown-wooden-table-composite-kitchen-sink-grey-beige-color-covered-bedding-sheets-cream-laminated-floor-glass-shelf-striped-pattern-frieze-rug-white-laminated-wooden-study-desk.jpg',
+  address: '20-34 grand ave',
+  city: 'Ridgewood',
+  state: 'NY',
+  rooms: 3,
+  price: 140000,
+  floorSpace: 2000,
+  extras: ['elevator', 'gym'],
+  homeType: 'Apartment'
+
+}, {
+  image: 'http://bagsjar.com/wp-content/uploads/2017/07/awesome-modern-apartments-interior-design-for-home-remodeling-classy-simple-on-modern-apartments-home-improvement.jpg',
+  address: '20-34 grand ave',
+  city: 'Ridgewood',
+  state: 'NY',
+  rooms: 3,
+  price: 210000,
+  floorSpace: 2000,
+  extras: ['elevator', 'gym'],
+  homeType: 'Apartment'
+
+}, {
+  image: 'https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg',
+  address: '20-34 grand ave',
+  city: 'Ridgewood',
+  state: 'NY',
+  rooms: 3,
+  price: 150000,
+  floorSpace: 2000,
+  extras: ['elevator', 'gym'],
+  homeType: 'Apartment'
+
+}];
+
+exports.default = listings;
+
+/***/ }),
+
+/***/ 102:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28,6 +87,10 @@ var _Listings = __webpack_require__(99);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
+var _ListingsData = __webpack_require__(100);
+
+var _ListingsData2 = _interopRequireDefault(_ListingsData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -45,7 +108,8 @@ var App = function (_Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.state = {
-      name: 'Joe'
+      name: 'Joe',
+      listingsData: _ListingsData2.default
     };
     return _this;
   }
@@ -53,6 +117,9 @@ var App = function (_Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
+
+      console.log(_ListingsData2.default);
+
       return _react2.default.createElement(
         'div',
         null,
@@ -644,6 +711,89 @@ var Listings = function (_Component) {
                 ' London '
               )
             )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'listing' },
+            _react2.default.createElement(
+              'div',
+              { className: 'listing-img' },
+              _react2.default.createElement(
+                'span',
+                { className: 'address' },
+                'Appartment Kleiweg'
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'details' },
+                _react2.default.createElement('div', { className: 'user-img' }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'user-details' },
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'user-name' },
+                    'Nina Smith'
+                  ),
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'post-date' },
+                    'Posted on 05/05/18'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'listing-details' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'floor-space' },
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '1000ft\xB2'
+                    )
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'bedrooms' },
+                    _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                    _react2.default.createElement(
+                      'span',
+                      null,
+                      '3 bedrooms'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'view-listing-btn' },
+                  _react2.default.createElement(
+                    'button',
+                    null,
+                    _react2.default.createElement(
+                      'a',
+                      { href: '#' },
+                      'View listing'
+                    )
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'bottom-info' },
+              _react2.default.createElement(
+                'span',
+                { className: 'property-price' },
+                '$1000 / month '
+              ),
+              _react2.default.createElement(
+                'span',
+                { className: 'property-location' },
+                _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
+                ' London '
+              )
+            )
           )
         ),
         _react2.default.createElement(
@@ -695,4 +845,4 @@ exports.default = Listings;
 
 /***/ })
 
-},[101]);
+},[102]);
