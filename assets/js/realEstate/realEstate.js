@@ -9,22 +9,30 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      name: 'Joe',
+      name: 'Drew',
       listingsData
     }
+
+
+
+  }
+
+  onInputChange = (e) => {
+
+    console.log(e.target.value);
   }
 
   render () {
 
-    console.log(listingsData);
+    //console.log(listingsData);
 
     return (
 
       <div>
         <Header name='Andrews'/>
         <section id='content-area'>
-          <Filter />
-          <Listings />
+          <Filter onInputChange={this.onInputChange}/>
+          <Listings listingsData={this.state.listingsData} />
         </section>
       </div>
 

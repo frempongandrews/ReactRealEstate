@@ -1,20 +1,137 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types';
+
+
+//todo loop all data
+
+
+
 
 
 export default class Listings extends Component {
 
-  constructor () {
+  constructor (props) {
 
-    super()
+    super(props);
 
-    this.state = {
-
-
-    }
 
   }
 
+  static propTypes = {
+    listingsData: PropTypes.arrayOf(PropTypes.shape({
+      image: PropTypes.string,
+      address: PropTypes.string,
+      city: PropTypes.string,
+      rooms: PropTypes.number,
+      price: PropTypes.number,
+      floorSpace: PropTypes.number,
+      extras: PropTypes.arrayOf(PropTypes.string),
+      homeType: PropTypes.string
+    }))
+
+  }
+
+  static defaultProps = {
+    listingsData: []
+  }
+
   render () {
+
+    //console.log(this.props);
+
+    const listingItems = this.props.listingsData.map((listingItem, i) => {
+
+      let userListingImageUrl = 'https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg';
+
+      let listingUserImageStyle = {
+        backgroundImage: 'url(' + userListingImageUrl + ')'
+
+      };
+
+
+      //listing image
+      let listingBackground = listingItem.image;
+
+      let listingImageStyle = {
+        backgroundImage: 'url(' + listingBackground + ')'
+      };
+
+      return (
+
+
+
+
+        <div className='listing' key={i}>
+
+
+            {/*listing image*/}
+            <div className='listing-img' style={listingImageStyle}>
+
+
+
+              <span className='address'>{listingItem.address}</span>
+
+
+
+
+
+              {/* details/hover/sub view*/}
+
+              <div className='details'>
+
+                <div className='user-img' style={listingUserImageStyle}></div>
+
+                <div className='user-details'>
+                  <span className='user-name'>Nina Smith</span>
+                  <span className='post-date'>Posted on 05/05/18</span>
+                </div>
+
+                {/*details/hover sub view: listing details*/}
+                <div className='listing-details'>
+
+                  <div className='floor-space'>
+                    <span>1000ft&sup2;</span>
+                  </div>
+
+                  <div className='bedrooms'>
+                    <i className='fa fa-bed' aria-hidden='true'></i>
+                    <span>{listingItem.rooms} bedrooms</span>
+                  </div>
+                </div>
+                {/*details/hover sub view: end listing details*/}
+
+
+                <div className='view-listing-btn'>
+                  <button><a href='#'>View listing</a></button>
+                </div>
+
+              </div>
+
+              {/*end details/hover/sub view*/}
+
+
+
+            </div>
+            {/*end listing image*/}
+
+
+            {/*listing bottom info*/}
+            <div className='bottom-info'>
+
+              <span className='property-price'>${listingItem.price} </span>
+              <span className='property-location'><i className='fa fa-map-marker' aria-hidden='true'></i> {listingItem.city} </span>
+
+            </div>
+            {/*end listing bottom info*/}
+
+          </div>
+
+      )
+
+    });
+
+
+
 
     return(
 
@@ -24,7 +141,7 @@ export default class Listings extends Component {
 
 
         <section className='search-area'>
-          <input type='text' name='search'/>
+          <input type='text' name='search' placeholder='Search...'/>
         </section>
 
 
@@ -65,308 +182,12 @@ export default class Listings extends Component {
 
 
 
+          {/*/////// list items///////*/}
 
 
-
-
-
-
-          {/*/////// 3 list items///////*/}
-          {/*////////////////////////////////////////////*/}
-
-
-          {/*listing item*/}
-          <div className='listing'>
-
-
-            {/*listing image*/}
-            <div className='listing-img'>
-
-
-
-              <span className='address'>Appartment Kleiweg</span>
-
-
-
-
-
-              {/* details/hover/sub view*/}
-
-              <div className='details'>
-
-                <div className='user-img'></div>
-
-                <div className='user-details'>
-                  <span className='user-name'>Nina Smith</span>
-                  <span className='post-date'>Posted on 05/05/18</span>
-                </div>
-
-                {/*details/hover sub view: listing details*/}
-                <div className='listing-details'>
-
-                  <div className='floor-space'>
-                    <span>1000ft&sup2;</span>
-                  </div>
-
-                  <div className='bedrooms'>
-                    <i className='fa fa-bed' aria-hidden='true'></i>
-                    <span>3 bedrooms</span>
-                  </div>
-                </div>
-                {/*details/hover sub view: end listing details*/}
-
-
-                <div className='view-listing-btn'>
-                  <button><a href='#'>View listing</a></button>
-                </div>
-
-              </div>
-
-              {/*end details/hover/sub view*/}
-
-
-
-            </div>
-            {/*end listing image*/}
-
-
-            {/*listing bottom info*/}
-            <div className='bottom-info'>
-
-              <span className='property-price'>$1000 / month </span>
-              <span className='property-location'><i className='fa fa-map-marker' aria-hidden='true'></i> London </span>
-
-            </div>
-            {/*end listing bottom info*/}
-
-
-
-          </div>
-          {/*end listing item*/}
-
-
+          {listingItems}
 
           {/*////////////////////////////////////////////*/}
-
-
-          {/*listing item*/}
-          <div className='listing'>
-
-
-            {/*listing image*/}
-            <div className='listing-img'>
-
-              <span className='address'>Appartment Kleiweg</span>
-
-
-              {/* details/hover/sub view*/}
-
-              <div className='details'>
-
-                <div className='user-img'></div>
-
-                <div className='user-details'>
-                  <span className='user-name'>Nina Smith</span>
-                  <span className='post-date'>Posted on 05/05/18</span>
-                </div>
-
-                {/*details/hover sub view: listing details*/}
-                <div className='listing-details'>
-
-                  <div className='floor-space'>
-                    <span>1000ft&sup2;</span>
-                  </div>
-
-                  <div className='bedrooms'>
-                    <i className='fa fa-bed' aria-hidden='true'></i>
-                    <span>3 bedrooms</span>
-                  </div>
-                </div>
-                {/*details/hover sub view: end listing details*/}
-
-
-                <div className='view-listing-btn'>
-                  <button><a href='#'>View listing</a></button>
-                </div>
-
-              </div>
-
-              {/*end details/hover/sub view*/}
-
-
-
-            </div>
-            {/*end listing image*/}
-
-
-            {/*listing bottom info*/}
-            <div className='bottom-info'>
-
-              <span className='property-price'>$1000 / month </span>
-              <span className='property-location'><i className='fa fa-map-marker' aria-hidden='true'></i> London </span>
-
-            </div>
-            {/*end listing bottom info*/}
-
-
-
-          </div>
-          {/*end listing item*/}
-
-          {/*////////////////////////////////////////////*/}
-
-
-          {/*listing item*/}
-          <div className='listing'>
-
-
-            {/*listing image*/}
-            <div className='listing-img'>
-
-              <span className='address'>Appartment Kleiweg</span>
-
-
-              {/* details/hover/sub view*/}
-
-              <div className='details'>
-
-                <div className='user-img'></div>
-
-                <div className='user-details'>
-                  <span className='user-name'>Nina Smith</span>
-                  <span className='post-date'>Posted on 05/05/18</span>
-                </div>
-
-                {/*details/hover sub view: listing details*/}
-                <div className='listing-details'>
-
-                  <div className='floor-space'>
-                    <span>1000ft&sup2;</span>
-                  </div>
-
-                  <div className='bedrooms'>
-                    <i className='fa fa-bed' aria-hidden='true'></i>
-                    <span>3 bedrooms</span>
-                  </div>
-                </div>
-                {/*details/hover sub view: end listing details*/}
-
-
-                <div className='view-listing-btn'>
-                  <button><a href='#'>View listing</a></button>
-                </div>
-
-              </div>
-
-              {/*end details/hover/sub view*/}
-
-
-
-            </div>
-            {/*end listing image*/}
-
-
-            {/*listing bottom info*/}
-            <div className='bottom-info'>
-
-              <span className='property-price'>$1000 / month </span>
-              <span className='property-location'><i className='fa fa-map-marker' aria-hidden='true'></i> London </span>
-
-            </div>
-            {/*end listing bottom info*/}
-
-
-
-          </div>
-          {/*end listing item*/}
-
-
-          {/*////////////////////////////////////////////*/}
-
-
-          {/*listing item*/}
-          <div className='listing'>
-
-
-            {/*listing image*/}
-            <div className='listing-img'>
-
-              <span className='address'>Appartment Kleiweg</span>
-
-
-              {/* details/hover/sub view*/}
-
-              <div className='details'>
-
-                <div className='user-img'></div>
-
-                <div className='user-details'>
-                  <span className='user-name'>Nina Smith</span>
-                  <span className='post-date'>Posted on 05/05/18</span>
-                </div>
-
-                {/*details/hover sub view: listing details*/}
-                <div className='listing-details'>
-
-                  <div className='floor-space'>
-                    <span>1000ft&sup2;</span>
-                  </div>
-
-                  <div className='bedrooms'>
-                    <i className='fa fa-bed' aria-hidden='true'></i>
-                    <span>3 bedrooms</span>
-                  </div>
-                </div>
-                {/*details/hover sub view: end listing details*/}
-
-
-                <div className='view-listing-btn'>
-                  <button><a href='#'>View listing</a></button>
-                </div>
-
-              </div>
-
-              {/*end details/hover/sub view*/}
-
-
-
-            </div>
-            {/*end listing image*/}
-
-
-            {/*listing bottom info*/}
-            <div className='bottom-info'>
-
-              <span className='property-price'>$1000 / month </span>
-              <span className='property-location'><i className='fa fa-map-marker' aria-hidden='true'></i> London </span>
-
-            </div>
-            {/*end listing bottom info*/}
-
-
-
-          </div>
-          {/*end listing item*/}
-
-
-
-
-          {/*///////End 4 list items///////*/}
-          {/*////////////////////////////////////////////*/}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
