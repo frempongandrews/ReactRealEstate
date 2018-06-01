@@ -34,23 +34,23 @@ export default class Filter extends Component {
 
 
           <span className='filter_by_housetype'>House Type</span>
-          <select name='housetype' className='filters housetype'>
+          <select name='housetype' className='filters housetype' onChange={this.props.onInputChange}>
             <option value=''></option>
-            <option >Flat</option>
-            <option >Detached</option>
-            <option >Semi-Detached</option>
-            <option >Terraced</option>
-            <option >Bungalows</option>
+            <option value='flat'>Flat</option>
+            <option value='detached'>Detached</option>
+            <option value='semi_detached'>Semi-Detached</option>
+            <option value='terraced'>Terraced</option>
+            <option value='bungalow'>Bungalow</option>
           </select>
 
 
           <span className='filter_by_numberOfBedrooms'>Bedrooms</span>
-          <select name='bedrooms' className='filters bedrooms'>
+          <select name='bedrooms' className='filters bedrooms' onChange={this.props.onInputChange}>
             <option value=''></option>
-            <option >2 Bedrooms</option>
-            <option >3 Bedrooms</option>
-            <option >4 Bedrooms</option>
-            <option >More than 4 Bedrooms</option>
+            <option value='2'>2 Bedrooms</option>
+            <option value='3'>3 Bedrooms</option>
+            <option value='4'>4 Bedrooms</option>
+            <option value='more_than_4'>More than 4 Bedrooms</option>
           </select>
 
 
@@ -58,8 +58,8 @@ export default class Filter extends Component {
           <div className='filters price'>
 
             <span className='title'>Price</span>
-            <input type='text' name='min-price' className='min price' placeholder='from:'/>
-            <input type='text' name='max-price' className='max-price' placeholder='to:'/>
+            <input type='text' name='min-price' className='min price' placeholder='from:' onChange={this.props.onInputChange}/>
+            <input type='text' name='max-price' className='max-price' placeholder='to:' onChange={this.props.onInputChange}/>
 
           </div>
           {/*<!--end price -->*/}
@@ -69,8 +69,8 @@ export default class Filter extends Component {
           <div className='filters floorspace'>
 
             <span className='title'>Floor Space</span>
-            <input type='text' name='min-floor-space' className='min-floor-space' placeholder='from:'/>
-            <input type='text' name='max-floor-space' className='max-floor-space' placeholder='to:'/>
+            <input type='text' name='min-floor-space' className='min-floor-space' placeholder='from:' onChange={this.props.onInputChange}/>
+            <input type='text' name='max-floor-space' className='max-floor-space' placeholder='to:' onChange={this.props.onInputChange}/>
 
           </div>
           {/*<!--end floorspace -->*/}
@@ -85,14 +85,14 @@ export default class Filter extends Component {
             <label htmlFor='extras'>
 
               <span>Elevators</span>
-              <input name='extras' value='elevator' type='checkbox'/>
+              <input name='elevators' value='elevator' type='checkbox' onChange={this.props.onInputChange}/>
 
             </label>
 
             <label htmlFor='extras'>
 
               <span>Swimming Pool</span>
-              <input name='extras' value='swimming-pool' type='checkbox'/>
+              <input name='swimming_pool' value='swimming-pool' type='checkbox' onChange={this.props.onInputChange}/>
 
             </label>
 
@@ -100,7 +100,7 @@ export default class Filter extends Component {
             <label htmlFor='extras'>
 
               <span>Gym</span>
-              <input name='extras' value='gym' type='checkbox'/>
+              <input name='gym' value='gym' type='checkbox' onChange={this.props.onInputChange}/>
 
             </label>
 

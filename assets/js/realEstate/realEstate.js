@@ -19,7 +19,14 @@ class App extends Component {
 
   onInputChange = (e) => {
 
-    console.log(e.target.value);
+   let name = e.target.name
+   let value = (e.target.type === 'checkbox') ? e.target.checked : e.target.value;
+
+   this.setState ({
+     [name]: value
+   }, () => {
+     console.log(this.state);
+   })
   }
 
   render () {

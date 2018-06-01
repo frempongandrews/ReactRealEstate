@@ -136,6 +136,8 @@ var _ListingsData2 = _interopRequireDefault(_ListingsData);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -152,7 +154,12 @@ var App = function (_Component) {
 
     _this.onInputChange = function (e) {
 
-      console.log(e.target.value);
+      var name = e.target.name;
+      var value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+
+      _this.setState(_defineProperty({}, name, value), function () {
+        console.log(_this.state);
+      });
     };
 
     _this.state = {
@@ -270,32 +277,32 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'select',
-            { name: 'housetype', className: 'filters housetype' },
+            { name: 'housetype', className: 'filters housetype', onChange: this.props.onInputChange },
             _react2.default.createElement('option', { value: '' }),
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'flat' },
               'Flat'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'detached' },
               'Detached'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'semi_detached' },
               'Semi-Detached'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'terraced' },
               'Terraced'
             ),
             _react2.default.createElement(
               'option',
-              null,
-              'Bungalows'
+              { value: 'bungalow' },
+              'Bungalow'
             )
           ),
           _react2.default.createElement(
@@ -305,26 +312,26 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'select',
-            { name: 'bedrooms', className: 'filters bedrooms' },
+            { name: 'bedrooms', className: 'filters bedrooms', onChange: this.props.onInputChange },
             _react2.default.createElement('option', { value: '' }),
             _react2.default.createElement(
               'option',
-              null,
+              { value: '2' },
               '2 Bedrooms'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: '3' },
               '3 Bedrooms'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: '4' },
               '4 Bedrooms'
             ),
             _react2.default.createElement(
               'option',
-              null,
+              { value: 'more_than_4' },
               'More than 4 Bedrooms'
             )
           ),
@@ -336,8 +343,8 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Price'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min-price', className: 'min price', placeholder: 'from:' }),
-            _react2.default.createElement('input', { type: 'text', name: 'max-price', className: 'max-price', placeholder: 'to:' })
+            _react2.default.createElement('input', { type: 'text', name: 'min-price', className: 'min price', placeholder: 'from:', onChange: this.props.onInputChange }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-price', className: 'max-price', placeholder: 'to:', onChange: this.props.onInputChange })
           ),
           _react2.default.createElement(
             'div',
@@ -347,8 +354,8 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Floor Space'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min-floor-space', className: 'min-floor-space', placeholder: 'from:' }),
-            _react2.default.createElement('input', { type: 'text', name: 'max-floor-space', className: 'max-floor-space', placeholder: 'to:' })
+            _react2.default.createElement('input', { type: 'text', name: 'min-floor-space', className: 'min-floor-space', placeholder: 'from:', onChange: this.props.onInputChange }),
+            _react2.default.createElement('input', { type: 'text', name: 'max-floor-space', className: 'max-floor-space', placeholder: 'to:', onChange: this.props.onInputChange })
           ),
           _react2.default.createElement(
             'div',
@@ -366,7 +373,7 @@ var Filter = function (_Component) {
                 null,
                 'Elevators'
               ),
-              _react2.default.createElement('input', { name: 'extras', value: 'elevator', type: 'checkbox' })
+              _react2.default.createElement('input', { name: 'elevators', value: 'elevator', type: 'checkbox', onChange: this.props.onInputChange })
             ),
             _react2.default.createElement(
               'label',
@@ -376,7 +383,7 @@ var Filter = function (_Component) {
                 null,
                 'Swimming Pool'
               ),
-              _react2.default.createElement('input', { name: 'extras', value: 'swimming-pool', type: 'checkbox' })
+              _react2.default.createElement('input', { name: 'swimming_pool', value: 'swimming-pool', type: 'checkbox', onChange: this.props.onInputChange })
             ),
             _react2.default.createElement(
               'label',
@@ -386,7 +393,7 @@ var Filter = function (_Component) {
                 null,
                 'Gym'
               ),
-              _react2.default.createElement('input', { name: 'extras', value: 'gym', type: 'checkbox' })
+              _react2.default.createElement('input', { name: 'gym', value: 'gym', type: 'checkbox', onChange: this.props.onInputChange })
             )
           )
         )

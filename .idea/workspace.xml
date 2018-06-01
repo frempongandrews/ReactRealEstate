@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26b7cd65-04f2-4de9-9fbe-0e16406c952d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/realEstate/utils/utils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/realEstate/Filter.js" afterPath="$PROJECT_DIR$/assets/js/realEstate/Filter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/realEstate/Listings.js" afterPath="$PROJECT_DIR$/assets/js/realEstate/Listings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/realEstate/data/ListingsData.js" afterPath="$PROJECT_DIR$/assets/js/realEstate/data/ListingsData.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/realEstate/realEstate.js" afterPath="$PROJECT_DIR$/assets/js/realEstate/realEstate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/_content-area.scss" afterPath="$PROJECT_DIR$/assets/sass/_content-area.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/components/realEstate.js" afterPath="$PROJECT_DIR$/public/js/components/realEstate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/components/vendor.js" afterPath="$PROJECT_DIR$/public/js/components/vendor.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,37 +18,81 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.43948498">
+    <splitter split-orientation="horizontal" split-proportion="0.43510056">
       <split-first>
         <leaf>
           <file leaf-file-name="Header.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Header.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                <state relative-caret-position="72">
+                  <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_content-area.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="_content-area.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/sass/_content-area.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="305">
-                  <caret line="80" column="8" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="23" />
-                  <folding />
+                <state relative-caret-position="-229">
+                  <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+                  <folding>
+                    <marker date="1527867153000" expanded="true" signature="113:1235" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="721:1231" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="1071:1219" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="1174:1210" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="1247:2628" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="1368:2069" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="1394:1664" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="1624:1658" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="1698:1778" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="1802:1874" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="1902:1969" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="1992:2064" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="2089:2243" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="2150:2238" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="2260:2625" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="2293:2496" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="2507:2619" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="2549:2613" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="2651:8134" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="2687:8131" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="3056:7776" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="4256:4390" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="4406:6033" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="6050:6584" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="6605:7013" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="6716:6878" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="6898:7004" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7037:7250" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7115:7127" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7146:7241" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7190:7230" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7275:7640" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7319:7632" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7438:7621" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7655:7769" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7674:7709" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7727:7760" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7795:8123" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7845:7952" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="7978:8116" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="8162:8749" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="8369:8745" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="8434:8742" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="8544:8633" ph="{...}" />
+                    <marker date="1527867153000" expanded="true" signature="8648:8737" ph="{...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="realEstate.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="realEstate.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/js/realEstate/realEstate.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="215">
-                  <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="104">
+                  <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -63,9 +100,14 @@
           <file leaf-file-name="ListingsData.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/js/realEstate/data/ListingsData.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-                  <folding />
+                <state relative-caret-position="309">
+                  <caret line="124" column="6" lean-forward="false" selection-start-line="124" selection-start-column="6" selection-end-line="124" selection-end-column="6" />
+                  <folding>
+                    <marker date="1527867153000" expanded="true" signature="17:2803" ph="[...]" />
+                    <marker date="1527867153000" expanded="true" signature="22:445" ph="{&quot;image&quot;: 'http://thaivillageaf.com/wp-content/uploads/modern-apartment-bedroom-brown-wooden-table-composite-kitchen-sink-grey-beige-color-covered-bedding-sheets-cream-laminated-floor-glass-shelf-striped-pattern-frieze-rug-white-laminated-wooden-study-desk.jpg'...}" />
+                    <marker date="1527867153000" expanded="true" signature="412:445" ph="[...]" />
+                    <marker date="1527867153000" expanded="true" signature="2792:2798" ph="{&quot;image&quot;: 'https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg'...}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -87,8 +129,8 @@
           <file leaf-file-name="Filter.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Filter.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="199">
-                  <caret line="82" column="12" lean-forward="true" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
+                <state relative-caret-position="83">
+                  <caret line="102" column="95" lean-forward="false" selection-start-line="102" selection-start-column="95" selection-end-line="102" selection-end-column="95" />
                   <folding />
                 </state>
               </provider>
@@ -97,8 +139,8 @@
           <file leaf-file-name="Listings.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Listings.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2010">
-                  <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+                <state relative-caret-position="139">
+                  <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
                   <folding>
                     <element signature="e#0#38#0" expanded="true" />
                   </folding>
@@ -146,8 +188,8 @@
         <option value="$PROJECT_DIR$/assets/js/realEstate/utils/utils.js" />
         <option value="$PROJECT_DIR$/assets/js/realEstate/data/ListingsData.js" />
         <option value="$PROJECT_DIR$/assets/js/realEstate/Listings.js" />
-        <option value="$PROJECT_DIR$/assets/js/realEstate/realEstate.js" />
         <option value="$PROJECT_DIR$/assets/sass/_content-area.scss" />
+        <option value="$PROJECT_DIR$/assets/js/realEstate/realEstate.js" />
         <option value="$PROJECT_DIR$/assets/js/realEstate/Filter.js" />
       </list>
     </option>
@@ -226,14 +268,6 @@
               <item name="react-redux-realEstateApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-redux-realEstateApp" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="realEstate" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-redux-realEstateApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-redux-realEstateApp" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="sass" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -300,14 +334,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45914000" />
+    <option name="totallyTimeSpent" value="46431000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1260" height="777" extended-state="0" />
+    <frame x="1" y="23" width="1260" height="777" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.059725586" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11702986" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -315,7 +349,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22727273" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3929619" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -409,14 +443,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/realEstate/utils/utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -427,44 +453,291 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/realEstate/data/ListingsData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Listings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        <state relative-caret-position="339">
+          <caret line="126" column="15" lean-forward="false" selection-start-line="126" selection-start-column="15" selection-end-line="126" selection-end-column="15" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/realEstate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1527867153000" expanded="true" signature="17:2803" ph="[...]" />
+            <marker date="1527867153000" expanded="true" signature="22:445" ph="{&quot;image&quot;: 'http://thaivillageaf.com/wp-content/uploads/modern-apartment-bedroom-brown-wooden-table-composite-kitchen-sink-grey-beige-color-covered-bedding-sheets-cream-laminated-floor-glass-shelf-striped-pattern-frieze-rug-white-laminated-wooden-study-desk.jpg'...}" />
+            <marker date="1527867153000" expanded="true" signature="412:445" ph="[...]" />
+            <marker date="1527867153000" expanded="true" signature="2792:2798" ph="{&quot;image&quot;: 'https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg'...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/_content-area.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="80" column="8" lean-forward="false" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="23" />
+        <state relative-caret-position="-229">
+          <caret line="78" column="5" lean-forward="false" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+          <folding>
+            <marker date="1527867153000" expanded="true" signature="113:1235" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="721:1231" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1071:1219" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1174:1210" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1247:2628" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1368:2069" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1394:1664" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1624:1658" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1698:1778" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1802:1874" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1902:1969" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1992:2064" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2089:2243" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2150:2238" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2260:2625" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2293:2496" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2507:2619" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2549:2613" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2651:8134" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2687:8131" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="3056:7776" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="4256:4390" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="4406:6033" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="6050:6584" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="6605:7013" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="6716:6878" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="6898:7004" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7037:7250" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7115:7127" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7146:7241" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7190:7230" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7275:7640" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7319:7632" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7438:7621" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7655:7769" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7674:7709" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7727:7760" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7795:8123" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7845:7952" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7978:8116" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="8162:8749" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="8369:8745" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="8434:8742" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="8544:8633" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="8648:8737" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Listings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/ContentArea.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/realEstate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="73" column="59" lean-forward="true" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/renamethisfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="10" column="50" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/_listings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/_reset.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="127" lean-forward="false" selection-start-line="7" selection-start-column="127" selection-end-line="7" selection-end-column="127" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/utils/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/data/ListingsData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="124" column="6" lean-forward="false" selection-start-line="124" selection-start-column="6" selection-end-line="124" selection-end-column="6" />
+          <folding>
+            <marker date="1527867153000" expanded="true" signature="17:2803" ph="[...]" />
+            <marker date="1527867153000" expanded="true" signature="22:445" ph="{&quot;image&quot;: 'http://thaivillageaf.com/wp-content/uploads/modern-apartment-bedroom-brown-wooden-table-composite-kitchen-sink-grey-beige-color-covered-bedding-sheets-cream-laminated-floor-glass-shelf-striped-pattern-frieze-rug-white-laminated-wooden-study-desk.jpg'...}" />
+            <marker date="1527867153000" expanded="true" signature="412:445" ph="[...]" />
+            <marker date="1527867153000" expanded="true" signature="2792:2798" ph="{&quot;image&quot;: 'https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Listings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/_content-area.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-229">
+          <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding>
+            <marker date="1527867153000" expanded="true" signature="113:1235" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="721:1231" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1071:1219" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1174:1210" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1247:2628" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1368:2069" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1394:1664" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1624:1658" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1698:1778" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1802:1874" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1902:1969" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="1992:2064" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2089:2243" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2150:2238" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2260:2625" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2293:2496" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2507:2619" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2549:2613" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2651:8134" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="2687:8131" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="3056:7776" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="4256:4390" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="4406:6033" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="6050:6584" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="6605:7013" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="6716:6878" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="6898:7004" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7037:7250" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7115:7127" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7146:7241" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7190:7230" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7275:7640" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7319:7632" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7438:7621" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7655:7769" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7674:7709" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7727:7760" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7795:8123" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7845:7952" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="7978:8116" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="8162:8749" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="8369:8745" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="8434:8742" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="8544:8633" ph="{...}" />
+            <marker date="1527867153000" expanded="true" signature="8648:8737" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/realEstate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Filter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="82" column="12" lean-forward="true" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
+        <state relative-caret-position="83">
+          <caret line="102" column="95" lean-forward="false" selection-start-line="102" selection-start-column="95" selection-end-line="102" selection-end-column="95" />
           <folding />
         </state>
       </provider>
