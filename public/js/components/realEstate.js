@@ -23,7 +23,7 @@ var listings = [{
 }, {
   image: 'http://www.bestofinteriors.com/wp-content/uploads/2014/11/229f6__design-modern-crib.jpg',
   address: '20-34 grand ave',
-  city: 'Ridgewood',
+  city: 'Liverpool',
   rooms: 2,
   price: 140000,
   floorSpace: 2000,
@@ -33,7 +33,7 @@ var listings = [{
 }, {
   image: 'http://www.marvelbuilding.com/wp-content/uploads/2011/02/grey-living-room-Luxury-Remodeled-Apartment-Iteriors.jpg',
   address: '20-34 grand ave',
-  city: 'Ridgewood',
+  city: 'Liverpool',
   state: 'NY',
   rooms: 5,
   price: 210000,
@@ -44,7 +44,7 @@ var listings = [{
 }, {
   image: 'https://www.decoraid.com/wp-content/uploads/1/projects/four.seasons.san.francisco.living.room.jpg',
   address: '20-34 grand ave',
-  city: 'Ridgewood',
+  city: 'Birmingham',
   state: 'NY',
   rooms: 3,
   price: 150000,
@@ -55,7 +55,7 @@ var listings = [{
 }, {
   image: 'http://leracome.com/wp-content/uploads/2018/04/charming-small-modern-living-room-design-throughout-ideas-for-worthy.jpg',
   address: '20-34 grand ave',
-  city: 'Ridgewood',
+  city: 'London',
   state: 'NY',
   rooms: 4,
   price: 250000,
@@ -66,7 +66,7 @@ var listings = [{
 }, {
   image: 'https://cdn.freshome.com/wp-content/uploads/2012/02/modern-apartment-Russia-4.jpg',
   address: '20-34 grand ave',
-  city: 'Ridgewood',
+  city: 'London',
   state: 'NY',
   rooms: 3,
   price: 150000,
@@ -77,7 +77,7 @@ var listings = [{
 }, {
   image: 'http://cdn.bestdesignideas.com/wp-content/uploads/2016/05/Interior-Of-Modern-Apartments-In-Tel-Aviv-From-Iryna-Dzhemesiuk-10.jpg',
   address: '20-34 grand ave',
-  city: 'Ridgewood',
+  city: 'Birmingham',
   state: 'NY',
   rooms: 3,
   price: 120000,
@@ -88,7 +88,7 @@ var listings = [{
 }, {
   image: 'https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg',
   address: '20-34 grand ave',
-  city: 'Ridgewood',
+  city: 'Manchester',
   state: 'NY',
   rooms: 2,
   price: 110000,
@@ -159,12 +159,38 @@ var App = function (_Component) {
 
       _this.setState(_defineProperty({}, name, value), function () {
         console.log(_this.state);
+        _this.onPriceChange();
       });
+    };
+
+    _this.onPriceChange = function () {
+      console.log('Changing price');
+
+      if (_this.state.min_price > _this.state.max_price) {
+
+        console.log('Error');
+
+        _this.setState({
+          priceError: true
+        });
+
+        console.log('finished resetting state');
+      } else {
+
+        _this.setState({
+
+          priceError: false
+
+        });
+      }
+
+      console.log('current state: ', _this.state);
     };
 
     _this.state = {
       name: 'Drew',
-      listingsData: _ListingsData2.default
+      listingsData: _ListingsData2.default,
+      priceError: false
     };
 
     return _this;
@@ -174,8 +200,7 @@ var App = function (_Component) {
     key: 'render',
     value: function render() {
 
-      //console.log(listingsData);
-
+      // console.log(this.state)
       return _react2.default.createElement(
         'div',
         null,
@@ -183,7 +208,7 @@ var App = function (_Component) {
         _react2.default.createElement(
           'section',
           { id: 'content-area' },
-          _react2.default.createElement(_Filter2.default, { onInputChange: this.onInputChange }),
+          _react2.default.createElement(_Filter2.default, { onInputChange: this.onInputChange, globalState: this.state }),
           _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
         )
       );
@@ -257,7 +282,7 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'select',
-            { name: 'neighbourhood', className: 'filters neighbourhood', onChange: this.props.onInputChange },
+            { name: 'city', className: 'filters city', onChange: this.props.onInputChange },
             _react2.default.createElement('option', { value: '' }),
             _react2.default.createElement(
               'option',
@@ -268,6 +293,16 @@ var Filter = function (_Component) {
               'option',
               { value: 'Liverpool' },
               'Liverpool'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: 'London' },
+              'London'
+            ),
+            _react2.default.createElement(
+              'option',
+              { value: 'Birmingham' },
+              'Birmingham'
             )
           ),
           _react2.default.createElement(
@@ -338,13 +373,18 @@ var Filter = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'filters price' },
+            this.props.globalState.priceError && _react2.default.createElement(
+              'p',
+              null,
+              'Min price cannot be higher than Max price'
+            ),
             _react2.default.createElement(
               'span',
               { className: 'title' },
               'Price'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min-price', className: 'min price', placeholder: 'from:', onChange: this.props.onInputChange }),
-            _react2.default.createElement('input', { type: 'text', name: 'max-price', className: 'max-price', placeholder: 'to:', onChange: this.props.onInputChange })
+            _react2.default.createElement('input', { type: 'text', name: 'min_price', className: 'min price', placeholder: 'from:', onChange: this.props.onInputChange }),
+            _react2.default.createElement('input', { type: 'text', name: 'max_price', className: 'max-price', placeholder: 'to:', onChange: this.props.onInputChange })
           ),
           _react2.default.createElement(
             'div',

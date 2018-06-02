@@ -10,7 +10,8 @@ class App extends Component {
     super()
     this.state = {
       name: 'Drew',
-      listingsData
+      listingsData,
+      priceError: false
     }
 
 
@@ -26,19 +27,45 @@ class App extends Component {
      [name]: value
    }, () => {
      console.log(this.state);
+     this.onPriceChange();
+
    })
+
+  }
+
+  onPriceChange = () => {
+    console.log('Changing price')
+
+    if (this.state.min_price > this.state.max_price) {
+
+      console.log('Error');
+
+      this.setState({
+        priceError: true
+      })
+
+      console.log('finished resetting state')
+    } else {
+
+      this.setState({
+
+          priceError: false
+
+      })
+    }
+
+    console.log('current state: ',this.state);
   }
 
   render () {
 
-    //console.log(listingsData);
-
+    // console.log(this.state)
     return (
 
       <div>
         <Header name='Andrews'/>
         <section id='content-area'>
-          <Filter onInputChange={this.onInputChange}/>
+          <Filter onInputChange={this.onInputChange} globalState={this.state} />
           <Listings listingsData={this.state.listingsData} />
         </section>
       </div>

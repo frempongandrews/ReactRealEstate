@@ -26,10 +26,12 @@ export default class Filter extends Component {
           <h4>Filter</h4>
 
           <span className='filter_by_city'>City</span>
-          <select name='neighbourhood' className='filters neighbourhood' onChange={this.props.onInputChange}>
+          <select name="city" className='filters city' onChange={this.props.onInputChange}>
             <option value=''></option>
             <option value='Manchester'>Manchester</option>
             <option value='Liverpool'>Liverpool</option>
+            <option value='London'>London</option>
+            <option value='Birmingham'>Birmingham</option>
           </select>
 
 
@@ -57,9 +59,10 @@ export default class Filter extends Component {
           {/*<!--price -->*/}
           <div className='filters price'>
 
+            {this.props.globalState.priceError && <p>Min price cannot be higher than Max price</p>}
             <span className='title'>Price</span>
-            <input type='text' name='min-price' className='min price' placeholder='from:' onChange={this.props.onInputChange}/>
-            <input type='text' name='max-price' className='max-price' placeholder='to:' onChange={this.props.onInputChange}/>
+            <input type='text' name='min_price' className='min price' placeholder='from:' onChange={this.props.onInputChange} />
+            <input type='text' name='max_price' className='max-price' placeholder='to:' onChange={this.props.onInputChange}/>
 
           </div>
           {/*<!--end price -->*/}
