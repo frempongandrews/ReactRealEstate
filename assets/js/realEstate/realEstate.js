@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       name: 'Drew',
       listingsData,
-      priceError: false
+      priceError: false,
+      floorSpaceError: false
     }
 
 
@@ -28,7 +29,7 @@ class App extends Component {
    }, () => {
      console.log(this.state);
      this.onPriceChange();
-
+     this.onFloorSpaceChange();
    })
 
   }
@@ -48,6 +49,29 @@ class App extends Component {
       this.setState({
 
           priceError: false
+
+      })
+    }
+
+    //console.log('current state: ',this.state);
+  }
+
+
+  onFloorSpaceChange = () => {
+    console.log('Changing price')
+
+    if (parseInt(this.state.min_floor_space) > parseInt(this.state.max_floor_space)) {
+
+      this.setState({
+        floorSpaceError: true
+      })
+
+      //console.log('finished resetting state')
+    } else {
+
+      this.setState({
+
+        floorSpaceError: false
 
       })
     }

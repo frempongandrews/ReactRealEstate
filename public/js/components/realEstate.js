@@ -160,6 +160,7 @@ var App = function (_Component) {
       _this.setState(_defineProperty({}, name, value), function () {
         console.log(_this.state);
         _this.onPriceChange();
+        _this.onFloorSpaceChange();
       });
     };
 
@@ -185,10 +186,33 @@ var App = function (_Component) {
       //console.log('current state: ',this.state);
     };
 
+    _this.onFloorSpaceChange = function () {
+      console.log('Changing price');
+
+      if (parseInt(_this.state.min_floor_space) > parseInt(_this.state.max_floor_space)) {
+
+        _this.setState({
+          floorSpaceError: true
+        });
+
+        //console.log('finished resetting state')
+      } else {
+
+        _this.setState({
+
+          floorSpaceError: false
+
+        });
+      }
+
+      //console.log('current state: ',this.state);
+    };
+
     _this.state = {
       name: 'Drew',
       listingsData: _ListingsData2.default,
-      priceError: false
+      priceError: false,
+      floorSpaceError: false
     };
 
     return _this;
@@ -392,8 +416,13 @@ var Filter = function (_Component) {
               { className: 'title' },
               'Floor Space'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min-floor-space', className: 'min-floor-space', placeholder: 'from:', onChange: this.props.onInputChange }),
-            _react2.default.createElement('input', { type: 'text', name: 'max-floor-space', className: 'max-floor-space', placeholder: 'to:', onChange: this.props.onInputChange })
+            this.props.globalState.floorSpaceError && _react2.default.createElement(
+              'p',
+              { className: 'floor-space-error' },
+              'Min Floor Space cannot be higher than Max Floor Space'
+            ),
+            _react2.default.createElement('input', { type: 'text', name: 'min_floor_space', className: 'min-floor-space', placeholder: 'from:', onChange: this.props.onInputChange }),
+            _react2.default.createElement('input', { type: 'text', name: 'max_floor_space', className: 'max-floor-space', placeholder: 'to:', onChange: this.props.onInputChange })
           ),
           _react2.default.createElement(
             'div',
