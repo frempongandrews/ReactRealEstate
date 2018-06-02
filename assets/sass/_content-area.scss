@@ -28,9 +28,16 @@
 
     }
 
+    .price-filter, .floor-space-filter{
+      position: relative;
+    }
+
     .price-error, .floor-space-error{
-      font-size: 0.7rem;
+      font-size: 0.5rem;
       color: $pink;
+      position: absolute;
+      top: 18px;
+
     }
 
 
@@ -63,8 +70,10 @@
       font-size: 0.9rem;
       display: block;
       margin-bottom: 1rem;
-      color: $darkgrey
+      color: $darkgrey;
+
     }
+
 
     input[type='text']{
 

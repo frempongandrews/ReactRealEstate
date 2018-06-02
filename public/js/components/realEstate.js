@@ -172,8 +172,6 @@ var App = function (_Component) {
         _this.setState({
           priceError: true
         });
-
-        //console.log('finished resetting state')
       } else {
 
         _this.setState({
@@ -182,8 +180,6 @@ var App = function (_Component) {
 
         });
       }
-
-      //console.log('current state: ',this.state);
     };
 
     _this.onFloorSpaceChange = function () {
@@ -194,8 +190,6 @@ var App = function (_Component) {
         _this.setState({
           floorSpaceError: true
         });
-
-        //console.log('finished resetting state')
       } else {
 
         _this.setState({
@@ -204,15 +198,14 @@ var App = function (_Component) {
 
         });
       }
-
-      //console.log('current state: ',this.state);
     };
 
     _this.state = {
       name: 'Drew',
       listingsData: _ListingsData2.default,
       priceError: false,
-      floorSpaceError: false
+      floorSpaceError: false,
+      filteredData: _ListingsData2.default
     };
 
     return _this;
@@ -231,7 +224,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, { onInputChange: this.onInputChange, globalState: this.state }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData })
         )
       );
     }
@@ -394,7 +387,7 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'filters price' },
+            { className: 'filters price price-filter' },
             _react2.default.createElement(
               'span',
               { className: 'title' },
@@ -410,7 +403,7 @@ var Filter = function (_Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'filters floorspace' },
+            { className: 'filters floor-space-filter' },
             _react2.default.createElement(
               'span',
               { className: 'title' },

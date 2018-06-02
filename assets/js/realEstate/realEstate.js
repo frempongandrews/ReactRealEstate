@@ -12,7 +12,8 @@ class App extends Component {
       name: 'Drew',
       listingsData,
       priceError: false,
-      floorSpaceError: false
+      floorSpaceError: false,
+      filteredData: listingsData
     }
 
 
@@ -43,7 +44,6 @@ class App extends Component {
         priceError: true
       })
 
-      //console.log('finished resetting state')
     } else {
 
       this.setState({
@@ -53,7 +53,6 @@ class App extends Component {
       })
     }
 
-    //console.log('current state: ',this.state);
   }
 
 
@@ -66,7 +65,6 @@ class App extends Component {
         floorSpaceError: true
       })
 
-      //console.log('finished resetting state')
     } else {
 
       this.setState({
@@ -76,7 +74,6 @@ class App extends Component {
       })
     }
 
-    //console.log('current state: ',this.state);
   }
 
   render () {
@@ -88,7 +85,7 @@ class App extends Component {
         <Header name='Andrews'/>
         <section id='content-area'>
           <Filter onInputChange={this.onInputChange} globalState={this.state} />
-          <Listings listingsData={this.state.listingsData} />
+          <Listings listingsData={this.state.filteredData} />
         </section>
       </div>
 

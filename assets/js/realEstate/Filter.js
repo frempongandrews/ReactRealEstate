@@ -57,7 +57,7 @@ export default class Filter extends Component {
 
 
           {/*<!--price -->*/}
-          <div className='filters price'>
+          <div className='filters price price-filter'>
 
 
             <span className='title'>Price</span>
@@ -70,7 +70,7 @@ export default class Filter extends Component {
 
 
           {/*<!--floorspace -->*/}
-          <div className='filters floorspace'>
+          <div className='filters floor-space-filter'>
 
             <span className='title'>Floor Space</span>
             {this.props.globalState.floorSpaceError && <p className='floor-space-error'>Min Floor Space cannot be higher than Max Floor Space</p>}
