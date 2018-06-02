@@ -1,13 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
 
-
-//todo loop all data
-
-
-
-
-
 export default class Listings extends Component {
 
   constructor (props) {
@@ -61,8 +54,8 @@ export default class Listings extends Component {
 
 
 
-        <div className='listing' key={i}>
 
+        <div className='listing' key={i}>
 
             {/*listing image*/}
             <div className='listing-img' style={listingImageStyle}>
@@ -145,10 +138,13 @@ export default class Listings extends Component {
         </section>
 
 
+        {/*check length listings data before loop*/}
+        {(this.props.listingsData.length < 1) && <p>No Listings Found</p>}
 
         <section className='sortby-area'>
           <div className='results'>
-            300 results found
+
+            {this.props.listingsData.length} results found
           </div>
 
           <div className='sort-options'>

@@ -580,9 +580,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-//todo loop all data
-
-
 var Listings = function (_Component) {
   _inherits(Listings, _Component);
 
@@ -712,13 +709,19 @@ var Listings = function (_Component) {
           { className: 'search-area' },
           _react2.default.createElement('input', { type: 'text', name: 'search', placeholder: 'Search...' })
         ),
+        this.props.listingsData.length < 1 && _react2.default.createElement(
+          'p',
+          null,
+          'No Listings Found'
+        ),
         _react2.default.createElement(
           'section',
           { className: 'sortby-area' },
           _react2.default.createElement(
             'div',
             { className: 'results' },
-            '300 results found'
+            this.props.listingsData.length,
+            ' results found'
           ),
           _react2.default.createElement(
             'div',
