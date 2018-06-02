@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
-
+const currencyFormatter = require('currency-formatter');
 export default class Listings extends Component {
 
   constructor (props) {
@@ -111,7 +111,7 @@ export default class Listings extends Component {
             {/*listing bottom info*/}
             <div className='bottom-info'>
 
-              <span className='property-price'>${listingItem.price} </span>
+              <span className='property-price'>{currencyFormatter.format(listingItem.price, {code: 'GBP'})} </span>
               <span className='property-location'><i className='fa fa-map-marker' aria-hidden='true'></i> {listingItem.city} </span>
 
             </div>

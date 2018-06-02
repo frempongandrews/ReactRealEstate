@@ -12,6 +12,8 @@ class App extends Component {
       name: 'Drew',
       listingsData,
       priceError: false,
+      min_price: 0,
+      max_price: 500000,
       floorSpaceError: false,
       filteredData: listingsData
     }
@@ -28,15 +30,31 @@ class App extends Component {
    this.setState ({
      [name]: value
    }, () => {
-     console.log(this.state);
+     // console.log(this.state);
      this.onPriceChange();
      this.onFloorSpaceChange();
+     this.onFilterData();
    })
 
   }
 
+  onFilterData = () => {
+
+    let newData = this.state.listingsData.filter((listing) => {
+
+      return (listing.price >= this.state.min_price && listing.price <= this.state.max_price);
+
+    });
+
+    this.setState({
+      filteredData: newData
+    });
+
+
+  }
+
   onPriceChange = () => {
-    console.log('Changing price')
+    // console.log('Changing price')
 
     if (parseInt(this.state.min_price) > parseInt(this.state.max_price)) {
 

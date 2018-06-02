@@ -102,7 +102,7 @@ exports.default = listings;
 
 /***/ }),
 
-/***/ 102:
+/***/ 103:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -158,14 +158,27 @@ var App = function (_Component) {
       var value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
 
       _this.setState(_defineProperty({}, name, value), function () {
-        console.log(_this.state);
+        // console.log(this.state);
         _this.onPriceChange();
         _this.onFloorSpaceChange();
+        _this.onFilterData();
+      });
+    };
+
+    _this.onFilterData = function () {
+
+      var newData = _this.state.listingsData.filter(function (listing) {
+
+        return listing.price >= _this.state.min_price && listing.price <= _this.state.max_price;
+      });
+
+      _this.setState({
+        filteredData: newData
       });
     };
 
     _this.onPriceChange = function () {
-      console.log('Changing price');
+      // console.log('Changing price')
 
       if (parseInt(_this.state.min_price) > parseInt(_this.state.max_price)) {
 
@@ -204,6 +217,8 @@ var App = function (_Component) {
       name: 'Drew',
       listingsData: _ListingsData2.default,
       priceError: false,
+      min_price: 0,
+      max_price: 500000,
       floorSpaceError: false,
       filteredData: _ListingsData2.default
     };
@@ -398,8 +413,8 @@ var Filter = function (_Component) {
               { className: 'price-error' },
               'Min price cannot be higher than Max price'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min_price', className: 'min price', placeholder: 'from:', onChange: this.props.onInputChange }),
-            _react2.default.createElement('input', { type: 'text', name: 'max_price', className: 'max-price', placeholder: 'to:', onChange: this.props.onInputChange })
+            _react2.default.createElement('input', { type: 'number', name: 'min_price', className: 'min-price', placeholder: 'from:', onChange: this.props.onInputChange }),
+            _react2.default.createElement('input', { type: 'number', name: 'max_price', className: 'max-price', placeholder: 'to:', onChange: this.props.onInputChange })
           ),
           _react2.default.createElement(
             'div',
@@ -407,15 +422,15 @@ var Filter = function (_Component) {
             _react2.default.createElement(
               'span',
               { className: 'title' },
-              'Floor Space'
+              'Floor Space in ft\xB2'
             ),
             this.props.globalState.floorSpaceError && _react2.default.createElement(
               'p',
               { className: 'floor-space-error' },
               'Min Floor Space cannot be higher than Max Floor Space'
             ),
-            _react2.default.createElement('input', { type: 'text', name: 'min_floor_space', className: 'min-floor-space', placeholder: 'from:', onChange: this.props.onInputChange }),
-            _react2.default.createElement('input', { type: 'text', name: 'max_floor_space', className: 'max-floor-space', placeholder: 'to:', onChange: this.props.onInputChange })
+            _react2.default.createElement('input', { type: 'number', name: 'min_floor_space', className: 'min-floor-space', placeholder: 'from:', onChange: this.props.onInputChange }),
+            _react2.default.createElement('input', { type: 'number', name: 'max_floor_space', className: 'max-floor-space', placeholder: 'to:', onChange: this.props.onInputChange })
           ),
           _react2.default.createElement(
             'div',
@@ -580,6 +595,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var currencyFormatter = __webpack_require__(106);
+
 var Listings = function (_Component) {
   _inherits(Listings, _Component);
 
@@ -685,8 +702,7 @@ var Listings = function (_Component) {
             _react2.default.createElement(
               'span',
               { className: 'property-price' },
-              '$',
-              listingItem.price,
+              currencyFormatter.format(listingItem.price, { code: 'GBP' }),
               ' '
             ),
             _react2.default.createElement(
@@ -818,4 +834,4 @@ exports.default = Listings;
 
 /***/ })
 
-},[102]);
+},[103]);
