@@ -4,7 +4,6 @@
     <list default="true" id="26b7cd65-04f2-4de9-9fbe-0e16406c952d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/realEstate/Filter.js" afterPath="$PROJECT_DIR$/assets/js/realEstate/Filter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/realEstate/Listings.js" afterPath="$PROJECT_DIR$/assets/js/realEstate/Listings.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/realEstate/data/ListingsData.js" afterPath="$PROJECT_DIR$/assets/js/realEstate/data/ListingsData.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/realEstate/realEstate.js" afterPath="$PROJECT_DIR$/assets/js/realEstate/realEstate.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/components/realEstate.js" afterPath="$PROJECT_DIR$/public/js/components/realEstate.js" />
@@ -20,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.41273996">
+    <splitter split-orientation="horizontal" split-proportion="0.4973822">
       <split-first>
         <leaf>
           <file leaf-file-name="_content-area.scss" pinned="false" current-in-tab="false">
@@ -36,8 +35,8 @@
           <file leaf-file-name="realEstate.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/js/realEstate/realEstate.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="202">
-                  <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+                <state relative-caret-position="182">
+                  <caret line="118" column="30" lean-forward="false" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -48,8 +47,8 @@
           <file leaf-file-name="ListingsData.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/js/realEstate/data/ListingsData.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="135" column="18" lean-forward="true" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="18" />
+                <state relative-caret-position="107">
+                  <caret line="100" column="10" lean-forward="false" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
@@ -69,17 +68,17 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Filter.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Filter.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Filter.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="377">
-                  <caret line="77" column="54" lean-forward="false" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="54" />
+                <state relative-caret-position="153">
+                  <caret line="92" column="35" lean-forward="false" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Listings.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Listings.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Listings.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="92">
@@ -143,9 +142,9 @@
         <option value="$PROJECT_DIR$/public/js/components/realEstate.js" />
         <option value="$PROJECT_DIR$/public/js/components/vendor.js" />
         <option value="$PROJECT_DIR$/assets/sass/_content-area.scss" />
+        <option value="$PROJECT_DIR$/assets/js/realEstate/Listings.js" />
         <option value="$PROJECT_DIR$/assets/js/realEstate/Filter.js" />
         <option value="$PROJECT_DIR$/assets/js/realEstate/realEstate.js" />
-        <option value="$PROJECT_DIR$/assets/js/realEstate/Listings.js" />
         <option value="$PROJECT_DIR$/assets/js/realEstate/data/ListingsData.js" />
       </list>
     </option>
@@ -290,7 +289,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64387000" />
+    <option name="totallyTimeSpent" value="65411000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -592,14 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Filter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="77" column="54" lean-forward="false" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Listings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -610,10 +601,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/realEstate/Filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="92" column="35" lean-forward="false" selection-start-line="92" selection-start-column="35" selection-end-line="92" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/realEstate/realEstate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+        <state relative-caret-position="182">
+          <caret line="118" column="30" lean-forward="false" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -622,8 +621,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/realEstate/data/ListingsData.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="135" column="18" lean-forward="true" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="18" />
+        <state relative-caret-position="107">
+          <caret line="100" column="10" lean-forward="false" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
           <folding />
         </state>
       </provider>

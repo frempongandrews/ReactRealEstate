@@ -76,12 +76,10 @@ class App extends Component {
     if (this.state.bedrooms) {
 
       if (this.state.bedrooms === 'more_than_4') {
-        console.log('************inside more than 4');
+
         newData = newData.filter((listing) => {
           return (listing.bedrooms) > 4;
         });
-
-        console.log('************inside more than 4. newdata', newData);
       } else {
         newData = newData.filter((listing) => {
           return (listing.bedrooms + '') === this.state.bedrooms;
@@ -91,7 +89,34 @@ class App extends Component {
 
     }
 
+    //by extras-elevator
+    if (this.state.elevator) {
+      newData = newData.filter((listing) => {
 
+        return listing.extras.includes('elevator');
+      });
+    }
+
+    //by extras-swimming pool
+    if (this.state.swimming_pool) {
+      newData = newData.filter((listing) => {
+
+        return listing.extras.includes('pool');
+      });
+    }
+
+
+    //by extras-gym
+    if (this.state.gym) {
+      newData = newData.filter((listing) => {
+
+        return listing.extras.includes('gym');
+      });
+    }
+
+
+
+    //setting state to newData
     this.setState({
       filteredData: newData
     });

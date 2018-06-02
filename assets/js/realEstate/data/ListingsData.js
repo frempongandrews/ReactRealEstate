@@ -11,8 +11,6 @@ const listings = [
     price: 220000,
     floorSpace: 1000,
     extras: [
-      'elevator',
-      'gym',
 
     ],
     houseType: 'bungalow'
@@ -29,8 +27,7 @@ const listings = [
     price: 140000,
     floorSpace: 500,
     extras: [
-      'pool',
-      'gym'
+
     ],
     houseType: 'terraced'
 
@@ -47,7 +44,7 @@ const listings = [
     price: 340000,
     floorSpace: 800,
     extras: [
-      'gym'
+      'pool'
     ],
     houseType: 'bungalow'
 
@@ -64,7 +61,7 @@ const listings = [
     price: 150000,
     floorSpace: 400,
     extras: [
-      'elevator',
+      'pool',
 
     ],
     houseType: 'detached'
@@ -75,7 +72,7 @@ const listings = [
     image: 'http://leracome.com/wp-content/uploads/2018/04/charming-small-modern-living-room-design-throughout-ideas-for-worthy.jpg',
     postedBy: 'The Batman',
     postDate:'15/04/18',
-    address: 'Easton Road, Droylsden, L43',
+    address: 'Easton Road, L43',
     city: 'London',
     state: 'NY',
     bedrooms: 4,
@@ -102,6 +99,7 @@ const listings = [
     extras: [
       'elevator',
       'gym'
+
     ],
     houseType: 'flat'
 
@@ -118,8 +116,9 @@ const listings = [
     price: 120000,
     floorSpace: 1000,
     extras: [
-      'pool',
-      'gym'
+
+      'gym',
+      'elevator'
     ],
     houseType: 'flat'
 
@@ -136,7 +135,7 @@ const listings = [
     price: 310000,
     floorSpace: 950,
     extras: [
-      'elevator',
+      'pool',
       'gym'
     ],
     houseType: 'semi_detached'

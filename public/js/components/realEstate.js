@@ -19,7 +19,7 @@ var listings = [{
   bedrooms: 4,
   price: 220000,
   floorSpace: 1000,
-  extras: ['elevator', 'gym'],
+  extras: [],
   houseType: 'bungalow'
 
 }, {
@@ -31,7 +31,7 @@ var listings = [{
   bedrooms: 2,
   price: 140000,
   floorSpace: 500,
-  extras: ['pool', 'gym'],
+  extras: [],
   houseType: 'terraced'
 
 }, {
@@ -44,7 +44,7 @@ var listings = [{
   bedrooms: 5,
   price: 340000,
   floorSpace: 800,
-  extras: ['gym'],
+  extras: ['pool'],
   houseType: 'bungalow'
 
 }, {
@@ -57,14 +57,14 @@ var listings = [{
   bedrooms: 3,
   price: 150000,
   floorSpace: 400,
-  extras: ['elevator'],
+  extras: ['pool'],
   houseType: 'detached'
 
 }, {
   image: 'http://leracome.com/wp-content/uploads/2018/04/charming-small-modern-living-room-design-throughout-ideas-for-worthy.jpg',
   postedBy: 'The Batman',
   postDate: '15/04/18',
-  address: 'Easton Road, Droylsden, L43',
+  address: 'Easton Road, L43',
   city: 'London',
   state: 'NY',
   bedrooms: 4,
@@ -96,7 +96,7 @@ var listings = [{
   bedrooms: 3,
   price: 120000,
   floorSpace: 1000,
-  extras: ['pool', 'gym'],
+  extras: ['gym', 'elevator'],
   houseType: 'flat'
 
 }, {
@@ -109,7 +109,7 @@ var listings = [{
   bedrooms: 5,
   price: 310000,
   floorSpace: 950,
-  extras: ['elevator', 'gym'],
+  extras: ['pool', 'gym'],
   houseType: 'semi_detached'
 
 }];
@@ -213,12 +213,10 @@ var App = function (_Component) {
       if (_this.state.bedrooms) {
 
         if (_this.state.bedrooms === 'more_than_4') {
-          console.log('************inside more than 4');
+
           newData = newData.filter(function (listing) {
             return listing.bedrooms > 4;
           });
-
-          console.log('************inside more than 4. newdata', newData);
         } else {
           newData = newData.filter(function (listing) {
             return listing.bedrooms + '' === _this.state.bedrooms;
@@ -226,6 +224,31 @@ var App = function (_Component) {
         }
       }
 
+      //by extras-elevator
+      if (_this.state.elevator) {
+        newData = newData.filter(function (listing) {
+
+          return listing.extras.includes('elevator');
+        });
+      }
+
+      //by extras-swimming pool
+      if (_this.state.swimming_pool) {
+        newData = newData.filter(function (listing) {
+
+          return listing.extras.includes('pool');
+        });
+      }
+
+      //by extras-gym
+      if (_this.state.gym) {
+        newData = newData.filter(function (listing) {
+
+          return listing.extras.includes('gym');
+        });
+      }
+
+      //setting state to newData
       _this.setState({
         filteredData: newData
       });
@@ -503,7 +526,7 @@ var Filter = function (_Component) {
                 null,
                 'Elevator'
               ),
-              _react2.default.createElement('input', { name: 'elevators', value: 'elevator', type: 'checkbox', onChange: this.props.onInputChange })
+              _react2.default.createElement('input', { name: 'elevator', value: 'elevator', type: 'checkbox', onChange: this.props.onInputChange })
             ),
             _react2.default.createElement(
               'label',
