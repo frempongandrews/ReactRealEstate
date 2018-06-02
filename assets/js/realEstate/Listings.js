@@ -88,7 +88,7 @@ export default class Listings extends Component {
 
                   <div className='bedrooms'>
                     <i className='fa fa-bed' aria-hidden='true'></i>
-                    <span>{listingItem.rooms} bedrooms</span>
+                    <span>{listingItem.bedrooms} bedrooms</span>
                   </div>
                 </div>
                 {/*details/hover sub view: end listing details*/}

@@ -14,87 +14,87 @@ var listings = [{
   image: 'http://thaivillageaf.com/wp-content/uploads/modern-apartment-bedroom-brown-wooden-table-composite-kitchen-sink-grey-beige-color-covered-bedding-sheets-cream-laminated-floor-glass-shelf-striped-pattern-frieze-rug-white-laminated-wooden-study-desk.jpg',
   address: '20-34 grand ave',
   city: 'Manchester',
-  rooms: 4,
+  bedrooms: 4,
   price: 220000,
   floorSpace: 2000,
   extras: ['elevator', 'gym'],
-  homeType: 'Apartment'
+  houseType: 'bungalow'
 
 }, {
   image: 'http://www.bestofinteriors.com/wp-content/uploads/2014/11/229f6__design-modern-crib.jpg',
   address: '20-34 grand ave',
-  city: 'Liverpool',
-  rooms: 2,
+  city: 'Manchester',
+  bedrooms: 2,
   price: 140000,
   floorSpace: 2000,
   extras: ['pool', 'gym'],
-  homeType: 'Apartment'
+  houseType: 'semi_detached'
 
 }, {
   image: 'http://www.marvelbuilding.com/wp-content/uploads/2011/02/grey-living-room-Luxury-Remodeled-Apartment-Iteriors.jpg',
   address: '20-34 grand ave',
   city: 'Liverpool',
   state: 'NY',
-  rooms: 5,
-  price: 210000,
+  bedrooms: 5,
+  price: 340000,
   floorSpace: 2000,
   extras: ['gym'],
-  homeType: 'Apartment'
+  houseType: 'bungalow'
 
 }, {
   image: 'https://www.decoraid.com/wp-content/uploads/1/projects/four.seasons.san.francisco.living.room.jpg',
   address: '20-34 grand ave',
   city: 'Birmingham',
   state: 'NY',
-  rooms: 3,
+  bedrooms: 3,
   price: 150000,
   floorSpace: 2000,
   extras: ['elevator'],
-  homeType: 'Apartment'
+  houseType: 'flat'
 
 }, {
   image: 'http://leracome.com/wp-content/uploads/2018/04/charming-small-modern-living-room-design-throughout-ideas-for-worthy.jpg',
   address: '20-34 grand ave',
   city: 'London',
   state: 'NY',
-  rooms: 4,
+  bedrooms: 4,
   price: 250000,
   floorSpace: 2000,
   extras: ['elevator', 'pool'],
-  homeType: 'Apartment'
+  houseType: 'flat'
 
 }, {
   image: 'https://cdn.freshome.com/wp-content/uploads/2012/02/modern-apartment-Russia-4.jpg',
   address: '20-34 grand ave',
-  city: 'London',
+  city: 'Birmingham',
   state: 'NY',
-  rooms: 3,
+  bedrooms: 3,
   price: 150000,
   floorSpace: 2000,
   extras: ['elevator', 'gym'],
-  homeType: 'Apartment'
+  houseType: 'terraced'
 
 }, {
   image: 'http://cdn.bestdesignideas.com/wp-content/uploads/2016/05/Interior-Of-Modern-Apartments-In-Tel-Aviv-From-Iryna-Dzhemesiuk-10.jpg',
   address: '20-34 grand ave',
   city: 'Birmingham',
   state: 'NY',
-  rooms: 3,
+  bedrooms: 3,
   price: 120000,
   floorSpace: 2000,
   extras: ['pool', 'gym'],
-  homeType: 'Apartment'
+  houseType: 'detached'
 
 }, {
   image: 'https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg',
   address: '20-34 grand ave',
   city: 'Manchester',
   state: 'NY',
-  rooms: 2,
-  price: 110000,
+  bedrooms: 5,
+  price: 310000,
   floorSpace: 2000,
   extras: ['elevator', 'gym'],
-  homeType: 'Apartment'
+  houseType: 'flat'
 
 }];
 
@@ -158,7 +158,7 @@ var App = function (_Component) {
       var value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
 
       _this.setState(_defineProperty({}, name, value), function () {
-        // console.log(this.state);
+        console.log(_this.state);
         _this.onPriceChange();
         _this.onFloorSpaceChange();
         _this.onFilterData();
@@ -172,13 +172,43 @@ var App = function (_Component) {
         return listing.price >= _this.state.min_price && listing.price <= _this.state.max_price;
       });
 
+      //by city
+      if (_this.state.city) {
+        newData = newData.filter(function (listing) {
+          return listing.city === _this.state.city;
+        });
+      }
+
+      //by housetype
+      if (_this.state.housetype) {
+        newData = newData.filter(function (listing) {
+          return listing.houseType === _this.state.housetype;
+        });
+      }
+
+      //by bedrooms
+      if (_this.state.bedrooms) {
+
+        if (_this.state.bedrooms === 'more_than_4') {
+          console.log('************inside more than 4');
+          newData = newData.filter(function (listing) {
+            return listing.bedrooms > 4;
+          });
+
+          console.log('************inside more than 4. newdata', newData);
+        } else {
+          newData = newData.filter(function (listing) {
+            return listing.bedrooms + '' === _this.state.bedrooms;
+          });
+        }
+      }
+
       _this.setState({
         filteredData: newData
       });
     };
 
     _this.onPriceChange = function () {
-      // console.log('Changing price')
 
       if (parseInt(_this.state.min_price) > parseInt(_this.state.max_price)) {
 
@@ -196,7 +226,6 @@ var App = function (_Component) {
     };
 
     _this.onFloorSpaceChange = function () {
-      console.log('Changing price');
 
       if (parseInt(_this.state.min_floor_space) > parseInt(_this.state.max_floor_space)) {
 
@@ -216,10 +245,13 @@ var App = function (_Component) {
     _this.state = {
       name: 'Drew',
       listingsData: _ListingsData2.default,
-      priceError: false,
       min_price: 0,
       max_price: 500000,
+      min_floor_space: 0,
       floorSpaceError: false,
+      priceError: false,
+      isGridView: true,
+      isListView: false,
       filteredData: _ListingsData2.default
     };
 
@@ -413,7 +445,7 @@ var Filter = function (_Component) {
               { className: 'price-error' },
               'Min price cannot be higher than Max price'
             ),
-            _react2.default.createElement('input', { type: 'number', name: 'min_price', className: 'min-price', placeholder: 'from:', onChange: this.props.onInputChange }),
+            _react2.default.createElement('input', { type: 'number', name: 'min_price', className: 'min-price', placeholder: 'from:', value: this.props.globalState.min_price, onChange: this.props.onInputChange }),
             _react2.default.createElement('input', { type: 'number', name: 'max_price', className: 'max-price', placeholder: 'to:', onChange: this.props.onInputChange })
           ),
           _react2.default.createElement(
@@ -429,7 +461,7 @@ var Filter = function (_Component) {
               { className: 'floor-space-error' },
               'Min Floor Space cannot be higher than Max Floor Space'
             ),
-            _react2.default.createElement('input', { type: 'number', name: 'min_floor_space', className: 'min-floor-space', placeholder: 'from:', onChange: this.props.onInputChange }),
+            _react2.default.createElement('input', { type: 'number', name: 'min_floor_space', className: 'min-floor-space', value: this.props.globalState.min_price, placeholder: 'from:', onChange: this.props.onInputChange }),
             _react2.default.createElement('input', { type: 'number', name: 'max_floor_space', className: 'max-floor-space', placeholder: 'to:', onChange: this.props.onInputChange })
           ),
           _react2.default.createElement(
@@ -676,7 +708,7 @@ var Listings = function (_Component) {
                   _react2.default.createElement(
                     'span',
                     null,
-                    listingItem.rooms,
+                    listingItem.bedrooms,
                     ' bedrooms'
                   )
                 )

@@ -62,7 +62,7 @@ export default class Filter extends Component {
 
             <span className='title'>Price</span>
             {this.props.globalState.priceError && <p className='price-error'>Min price cannot be higher than Max price</p>}
-            <input type='number' name='min_price' className='min-price' placeholder='from:' onChange={this.props.onInputChange} />
+            <input type='number' name='min_price' className='min-price' placeholder='from:' value={this.props.globalState.min_price} onChange={this.props.onInputChange} />
             <input type='number' name='max_price' className='max-price' placeholder='to:' onChange={this.props.onInputChange}/>
 
           </div>
@@ -74,7 +74,7 @@ export default class Filter extends Component {
 
             <span className='title'>Floor Space in ft&sup2;</span>
             {this.props.globalState.floorSpaceError && <p className='floor-space-error'>Min Floor Space cannot be higher than Max Floor Space</p>}
-            <input type='number' name='min_floor_space' className='min-floor-space' placeholder='from:' onChange={this.props.onInputChange}/>
+            <input type='number' name='min_floor_space' className='min-floor-space' value={this.props.globalState.min_price} placeholder='from:' onChange={this.props.onInputChange}/>
             <input type='number' name='max_floor_space' className='max-floor-space' placeholder='to:' onChange={this.props.onInputChange}/>
 
           </div>

@@ -5,7 +5,7 @@ const listings = [
     image: 'http://thaivillageaf.com/wp-content/uploads/modern-apartment-bedroom-brown-wooden-table-composite-kitchen-sink-grey-beige-color-covered-bedding-sheets-cream-laminated-floor-glass-shelf-striped-pattern-frieze-rug-white-laminated-wooden-study-desk.jpg',
     address: '20-34 grand ave',
     city: 'Manchester',
-    rooms: 4,
+    bedrooms: 4,
     price: 220000,
     floorSpace: 2000,
     extras: [
@@ -13,22 +13,22 @@ const listings = [
       'gym',
 
     ],
-    homeType: 'Apartment'
+    houseType: 'bungalow'
 
   },
 
   {
     image: 'http://www.bestofinteriors.com/wp-content/uploads/2014/11/229f6__design-modern-crib.jpg',
     address: '20-34 grand ave',
-    city: 'Liverpool',
-    rooms: 2,
+    city: 'Manchester',
+    bedrooms: 2,
     price: 140000,
     floorSpace: 2000,
     extras: [
       'pool',
       'gym'
     ],
-    homeType: 'Apartment'
+    houseType: 'semi_detached'
 
   },
 
@@ -37,13 +37,13 @@ const listings = [
     address: '20-34 grand ave',
     city: 'Liverpool',
     state: 'NY',
-    rooms: 5,
-    price: 210000,
+    bedrooms: 5,
+    price: 340000,
     floorSpace: 2000,
     extras: [
       'gym'
     ],
-    homeType: 'Apartment'
+    houseType: 'bungalow'
 
   },
 
@@ -52,14 +52,14 @@ const listings = [
     address: '20-34 grand ave',
     city: 'Birmingham',
     state: 'NY',
-    rooms: 3,
+    bedrooms: 3,
     price: 150000,
     floorSpace: 2000,
     extras: [
       'elevator',
 
     ],
-    homeType: 'Apartment'
+    houseType: 'flat'
 
   },
 
@@ -68,30 +68,30 @@ const listings = [
     address: '20-34 grand ave',
     city: 'London',
     state: 'NY',
-    rooms: 4,
+    bedrooms: 4,
     price: 250000,
     floorSpace: 2000,
     extras: [
       'elevator',
       'pool'
     ],
-    homeType: 'Apartment'
+    houseType: 'flat'
 
   },
 
   {
     image: 'https://cdn.freshome.com/wp-content/uploads/2012/02/modern-apartment-Russia-4.jpg',
     address: '20-34 grand ave',
-    city: 'London',
+    city: 'Birmingham',
     state: 'NY',
-    rooms: 3,
+    bedrooms: 3,
     price: 150000,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Apartment'
+    houseType: 'terraced'
 
   },
 
@@ -100,14 +100,14 @@ const listings = [
     address: '20-34 grand ave',
     city: 'Birmingham',
     state: 'NY',
-    rooms: 3,
+    bedrooms: 3,
     price: 120000,
     floorSpace: 2000,
     extras: [
       'pool',
       'gym'
     ],
-    homeType: 'Apartment'
+    houseType: 'detached'
 
   },
 
@@ -116,14 +116,14 @@ const listings = [
     address: '20-34 grand ave',
     city: 'Manchester',
     state: 'NY',
-    rooms: 2,
-    price: 110000,
+    bedrooms: 5,
+    price: 310000,
     floorSpace: 2000,
     extras: [
       'elevator',
       'gym'
     ],
-    homeType: 'Apartment'
+    houseType: 'flat'
 
   },
 

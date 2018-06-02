@@ -11,10 +11,13 @@ class App extends Component {
     this.state = {
       name: 'Drew',
       listingsData,
-      priceError: false,
       min_price: 0,
       max_price: 500000,
+      min_floor_space: 0,
       floorSpaceError: false,
+      priceError: false,
+      isGridView: true,
+      isListView: false,
       filteredData: listingsData
     }
 
@@ -30,7 +33,7 @@ class App extends Component {
    this.setState ({
      [name]: value
    }, () => {
-     // console.log(this.state);
+     console.log(this.state);
      this.onPriceChange();
      this.onFloorSpaceChange();
      this.onFilterData();
@@ -46,6 +49,41 @@ class App extends Component {
 
     });
 
+
+    //by city
+    if (this.state.city) {
+      newData = newData.filter((listing) => {
+        return listing.city === this.state.city;
+      });
+    }
+
+    //by housetype
+    if (this.state.housetype) {
+      newData = newData.filter((listing) => {
+        return listing.houseType === this.state.housetype;
+      });
+    }
+
+    //by bedrooms
+    if (this.state.bedrooms) {
+
+      if (this.state.bedrooms === 'more_than_4') {
+        console.log('************inside more than 4');
+        newData = newData.filter((listing) => {
+          return (listing.bedrooms) > 4;
+        });
+
+        console.log('************inside more than 4. newdata', newData);
+      } else {
+        newData = newData.filter((listing) => {
+          return (listing.bedrooms + '') === this.state.bedrooms;
+        });
+      }
+
+
+    }
+
+
     this.setState({
       filteredData: newData
     });
@@ -54,7 +92,7 @@ class App extends Component {
   }
 
   onPriceChange = () => {
-    // console.log('Changing price')
+
 
     if (parseInt(this.state.min_price) > parseInt(this.state.max_price)) {
 
@@ -75,7 +113,7 @@ class App extends Component {
 
 
   onFloorSpaceChange = () => {
-    console.log('Changing price')
+
 
     if (parseInt(this.state.min_floor_space) > parseInt(this.state.max_floor_space)) {
 
