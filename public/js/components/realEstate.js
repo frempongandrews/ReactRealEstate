@@ -12,89 +12,105 @@ Object.defineProperty(exports, "__esModule", {
 var listings = [{
 
   image: 'http://thaivillageaf.com/wp-content/uploads/modern-apartment-bedroom-brown-wooden-table-composite-kitchen-sink-grey-beige-color-covered-bedding-sheets-cream-laminated-floor-glass-shelf-striped-pattern-frieze-rug-white-laminated-wooden-study-desk.jpg',
-  address: '20-34 grand ave',
+  postedBy: 'Nina Williams',
+  postDate: '05/05/18',
+  address: 'Mauldeth Road M14',
   city: 'Manchester',
   bedrooms: 4,
   price: 220000,
-  floorSpace: 2000,
+  floorSpace: 1000,
   extras: ['elevator', 'gym'],
   houseType: 'bungalow'
 
 }, {
   image: 'http://www.bestofinteriors.com/wp-content/uploads/2014/11/229f6__design-modern-crib.jpg',
-  address: '20-34 grand ave',
+  postedBy: 'Nathan Drake',
+  postDate: '25/05/18',
+  address: 'Cambridge Road M35',
   city: 'Manchester',
   bedrooms: 2,
   price: 140000,
-  floorSpace: 2000,
+  floorSpace: 500,
   extras: ['pool', 'gym'],
-  houseType: 'semi_detached'
+  houseType: 'terraced'
 
 }, {
   image: 'http://www.marvelbuilding.com/wp-content/uploads/2011/02/grey-living-room-Luxury-Remodeled-Apartment-Iteriors.jpg',
-  address: '20-34 grand ave',
+  postedBy: 'Leonardo Di Caprio',
+  postDate: '03/02/18',
+  address: 'Vicker Grove, L20',
   city: 'Liverpool',
   state: 'NY',
   bedrooms: 5,
   price: 340000,
-  floorSpace: 2000,
+  floorSpace: 800,
   extras: ['gym'],
   houseType: 'bungalow'
 
 }, {
   image: 'https://www.decoraid.com/wp-content/uploads/1/projects/four.seasons.san.francisco.living.room.jpg',
-  address: '20-34 grand ave',
+  postedBy: 'Christopher Nolan',
+  postDate: '09/04/18',
+  address: 'Dob Brook Close, B40',
   city: 'Birmingham',
   state: 'NY',
   bedrooms: 3,
   price: 150000,
-  floorSpace: 2000,
+  floorSpace: 400,
   extras: ['elevator'],
-  houseType: 'flat'
+  houseType: 'detached'
 
 }, {
   image: 'http://leracome.com/wp-content/uploads/2018/04/charming-small-modern-living-room-design-throughout-ideas-for-worthy.jpg',
-  address: '20-34 grand ave',
+  postedBy: 'The Batman',
+  postDate: '15/04/18',
+  address: 'Easton Road, Droylsden, L43',
   city: 'London',
   state: 'NY',
   bedrooms: 4,
   price: 250000,
-  floorSpace: 2000,
+  floorSpace: 350,
   extras: ['elevator', 'pool'],
   houseType: 'flat'
 
 }, {
   image: 'https://cdn.freshome.com/wp-content/uploads/2012/02/modern-apartment-Russia-4.jpg',
-  address: '20-34 grand ave',
+  postedBy: 'Nolan North',
+  postDate: '17/03/18',
+  address: 'Ormonde Avenue, B6',
   city: 'Birmingham',
   state: 'NY',
   bedrooms: 3,
   price: 150000,
-  floorSpace: 2000,
+  floorSpace: 1200,
   extras: ['elevator', 'gym'],
-  houseType: 'terraced'
+  houseType: 'flat'
 
 }, {
   image: 'http://cdn.bestdesignideas.com/wp-content/uploads/2016/05/Interior-Of-Modern-Apartments-In-Tel-Aviv-From-Iryna-Dzhemesiuk-10.jpg',
-  address: '20-34 grand ave',
+  postedBy: 'Nina Smith',
+  postDate: '10/05/18',
+  address: 'Gee Lane, B30',
   city: 'Birmingham',
   state: 'NY',
   bedrooms: 3,
   price: 120000,
-  floorSpace: 2000,
+  floorSpace: 1000,
   extras: ['pool', 'gym'],
-  houseType: 'detached'
+  houseType: 'flat'
 
 }, {
   image: 'https://architecturebeast.com/wp-content/uploads/2014/08/Top_50_Modern_House_Designs_Ever_Built_featured_on_architecture_beast_15.jpg',
-  address: '20-34 grand ave',
+  postedBy: 'Will Smith',
+  postDate: '22/05/18',
+  address: 'Kings Road, Stretford, Manchester M32',
   city: 'Manchester',
   state: 'NY',
   bedrooms: 5,
   price: 310000,
-  floorSpace: 2000,
+  floorSpace: 950,
   extras: ['elevator', 'gym'],
-  houseType: 'flat'
+  houseType: 'semi_detached'
 
 }];
 
@@ -171,6 +187,13 @@ var App = function (_Component) {
 
         return listing.price >= _this.state.min_price && listing.price <= _this.state.max_price;
       });
+
+      //by floor space
+      if (_this.state.max_floor_space) {
+        newData = newData.filter(function (listing) {
+          return listing.floorSpace <= parseInt(_this.state.max_floor_space);
+        });
+      }
 
       //by city
       if (_this.state.city) {
@@ -478,7 +501,7 @@ var Filter = function (_Component) {
               _react2.default.createElement(
                 'span',
                 null,
-                'Elevators'
+                'Elevator'
               ),
               _react2.default.createElement('input', { name: 'elevators', value: 'elevator', type: 'checkbox', onChange: this.props.onInputChange })
             ),
@@ -681,12 +704,13 @@ var Listings = function (_Component) {
                 _react2.default.createElement(
                   'span',
                   { className: 'user-name' },
-                  'Nina Smith'
+                  listingItem.postedBy
                 ),
                 _react2.default.createElement(
                   'span',
                   { className: 'post-date' },
-                  'Posted on 05/05/18'
+                  'Posted on ',
+                  listingItem.postDate
                 )
               ),
               _react2.default.createElement(
@@ -698,7 +722,8 @@ var Listings = function (_Component) {
                   _react2.default.createElement(
                     'span',
                     null,
-                    '1000ft\xB2'
+                    listingItem.floorSpace,
+                    'ft\xB2'
                   )
                 ),
                 _react2.default.createElement(
@@ -849,13 +874,15 @@ var Listings = function (_Component) {
 Listings.propTypes = {
   listingsData: _propTypes2.default.arrayOf(_propTypes2.default.shape({
     image: _propTypes2.default.string,
+    postedBy: _propTypes2.default.string,
+    postDate: _propTypes2.default.string,
     address: _propTypes2.default.string,
     city: _propTypes2.default.string,
-    rooms: _propTypes2.default.number,
+    bedrooms: _propTypes2.default.number,
     price: _propTypes2.default.number,
     floorSpace: _propTypes2.default.number,
     extras: _propTypes2.default.arrayOf(_propTypes2.default.string),
-    homeType: _propTypes2.default.string
+    houseType: _propTypes2.default.string
   }))
 
 };

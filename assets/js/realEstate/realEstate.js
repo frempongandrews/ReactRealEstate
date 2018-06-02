@@ -50,6 +50,14 @@ class App extends Component {
     });
 
 
+    //by floor space
+    if (this.state.max_floor_space) {
+      newData = newData.filter((listing) => {
+        return listing.floorSpace <= parseInt(this.state.max_floor_space);
+      });
+    }
+
+
     //by city
     if (this.state.city) {
       newData = newData.filter((listing) => {

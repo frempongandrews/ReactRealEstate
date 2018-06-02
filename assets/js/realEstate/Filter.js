@@ -89,7 +89,7 @@ export default class Filter extends Component {
 
             <label htmlFor='extras'>
 
-              <span>Elevators</span>
+              <span>Elevator</span>
               <input name='elevators' value='elevator' type='checkbox' onChange={this.props.onInputChange}/>
 
             </label>

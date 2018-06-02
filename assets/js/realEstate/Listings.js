@@ -13,13 +13,15 @@ export default class Listings extends Component {
   static propTypes = {
     listingsData: PropTypes.arrayOf(PropTypes.shape({
       image: PropTypes.string,
+      postedBy: PropTypes.string,
+      postDate: PropTypes.string,
       address: PropTypes.string,
       city: PropTypes.string,
-      rooms: PropTypes.number,
+      bedrooms: PropTypes.number,
       price: PropTypes.number,
       floorSpace: PropTypes.number,
       extras: PropTypes.arrayOf(PropTypes.string),
-      homeType: PropTypes.string
+      houseType: PropTypes.string
     }))
 
   }
@@ -75,15 +77,15 @@ export default class Listings extends Component {
                 <div className='user-img' style={listingUserImageStyle}></div>
 
                 <div className='user-details'>
-                  <span className='user-name'>Nina Smith</span>
-                  <span className='post-date'>Posted on 05/05/18</span>
+                  <span className='user-name'>{listingItem.postedBy}</span>
+                  <span className='post-date'>Posted on {listingItem.postDate}</span>
                 </div>
 
                 {/*details/hover sub view: listing details*/}
                 <div className='listing-details'>
 
                   <div className='floor-space'>
-                    <span>1000ft&sup2;</span>
+                    <span>{listingItem.floorSpace}ft&sup2;</span>
                   </div>
 
                   <div className='bedrooms'>
