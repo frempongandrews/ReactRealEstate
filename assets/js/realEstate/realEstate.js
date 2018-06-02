@@ -36,15 +36,13 @@ class App extends Component {
   onPriceChange = () => {
     console.log('Changing price')
 
-    if (this.state.min_price > this.state.max_price) {
-
-      console.log('Error');
+    if (parseInt(this.state.min_price) > parseInt(this.state.max_price)) {
 
       this.setState({
         priceError: true
       })
 
-      console.log('finished resetting state')
+      //console.log('finished resetting state')
     } else {
 
       this.setState({
@@ -54,7 +52,7 @@ class App extends Component {
       })
     }
 
-    console.log('current state: ',this.state);
+    //console.log('current state: ',this.state);
   }
 
   render () {

@@ -59,8 +59,9 @@ export default class Filter extends Component {
           {/*<!--price -->*/}
           <div className='filters price'>
 
-            {this.props.globalState.priceError && <p>Min price cannot be higher than Max price</p>}
+
             <span className='title'>Price</span>
+            {this.props.globalState.priceError && <p className='price-error'>Min price cannot be higher than Max price</p>}
             <input type='text' name='min_price' className='min price' placeholder='from:' onChange={this.props.onInputChange} />
             <input type='text' name='max_price' className='max-price' placeholder='to:' onChange={this.props.onInputChange}/>
 

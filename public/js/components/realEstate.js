@@ -166,15 +166,13 @@ var App = function (_Component) {
     _this.onPriceChange = function () {
       console.log('Changing price');
 
-      if (_this.state.min_price > _this.state.max_price) {
-
-        console.log('Error');
+      if (parseInt(_this.state.min_price) > parseInt(_this.state.max_price)) {
 
         _this.setState({
           priceError: true
         });
 
-        console.log('finished resetting state');
+        //console.log('finished resetting state')
       } else {
 
         _this.setState({
@@ -184,7 +182,7 @@ var App = function (_Component) {
         });
       }
 
-      console.log('current state: ', _this.state);
+      //console.log('current state: ',this.state);
     };
 
     _this.state = {
@@ -373,15 +371,15 @@ var Filter = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'filters price' },
-            this.props.globalState.priceError && _react2.default.createElement(
-              'p',
-              null,
-              'Min price cannot be higher than Max price'
-            ),
             _react2.default.createElement(
               'span',
               { className: 'title' },
               'Price'
+            ),
+            this.props.globalState.priceError && _react2.default.createElement(
+              'p',
+              { className: 'price-error' },
+              'Min price cannot be higher than Max price'
             ),
             _react2.default.createElement('input', { type: 'text', name: 'min_price', className: 'min price', placeholder: 'from:', onChange: this.props.onInputChange }),
             _react2.default.createElement('input', { type: 'text', name: 'max_price', className: 'max-price', placeholder: 'to:', onChange: this.props.onInputChange })
