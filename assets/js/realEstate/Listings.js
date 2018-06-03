@@ -30,9 +30,27 @@ export default class Listings extends Component {
     listingsData: []
   }
 
+  onGridView = () => {
+    this.props.activateGridView();
+  }
+
+  onListView = () => {
+    this.props.activateListView();
+  }
+
   render () {
 
     //console.log(this.props);
+
+    let isGrid = {
+      transform: 'scale(1.4)'
+    }
+
+    let listStyle = {
+      width: '100%',
+      maxWidth: '600px'
+
+    }
 
     const listingItems = this.props.listingsData.map((listingItem, i) => {
 
@@ -55,9 +73,7 @@ export default class Listings extends Component {
 
 
 
-
-
-        <div className='listing' key={i}>
+        <div className='listing' key={i} style={this.props.globalState.isGridView ? null : listStyle}>
 
             {/*listing image*/}
             <div className='listing-img' style={listingImageStyle}>
@@ -161,8 +177,8 @@ export default class Listings extends Component {
 
             <div className='view'>
 
-              <i className='fa fa-th-list' aria-hidden='true'></i>
-              <i className='fa fa-th' aria-hidden='true'></i>
+              <i className='fa fa-th-list' aria-hidden='true' onClick={this.onListView} style={this.props.globalState.isGridView ? null : isGrid}></i>
+              <i className='fa fa-th' aria-hidden='true' onClick={this.onGridView} style={this.props.globalState.isGridView ? isGrid : null}></i>
 
             </div>
 

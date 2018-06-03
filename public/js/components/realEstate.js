@@ -164,9 +164,23 @@ var App = function (_Component) {
   _inherits(App, _Component);
 
   function App() {
+    var _this$state;
+
     _classCallCheck(this, App);
 
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+
+    _this.activateGridView = function () {
+      _this.setState({
+        isGridView: true
+      });
+    };
+
+    _this.activateListView = function () {
+      _this.setState({
+        isGridView: false
+      });
+    };
 
     _this.onInputChange = function (e) {
 
@@ -323,7 +337,7 @@ var App = function (_Component) {
       }
     };
 
-    _this.state = {
+    _this.state = (_this$state = {
       name: 'Drew',
       listingsData: _ListingsData2.default,
       min_price: 0,
@@ -334,9 +348,8 @@ var App = function (_Component) {
       priceError: false,
       isGridView: true,
       isListView: false,
-      sortBy: '',
-      filteredData: _ListingsData2.default
-    };
+      sortBy: ''
+    }, _defineProperty(_this$state, 'isGridView', false), _defineProperty(_this$state, 'filteredData', _ListingsData2.default), _this$state);
 
     return _this;
   }
@@ -354,7 +367,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, { onInputChange: this.onInputChange, globalState: this.state }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData, onSortBy: this.onSortBy, globalState: this.state })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData, onSortBy: this.onSortBy, globalState: this.state, activateGridView: this.activateGridView, activateListView: this.activateListView })
         )
       );
     }
@@ -730,14 +743,35 @@ var Listings = function (_Component) {
   function Listings(props) {
     _classCallCheck(this, Listings);
 
-    return _possibleConstructorReturn(this, (Listings.__proto__ || Object.getPrototypeOf(Listings)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Listings.__proto__ || Object.getPrototypeOf(Listings)).call(this, props));
+
+    _this.onGridView = function () {
+      _this.props.activateGridView();
+    };
+
+    _this.onListView = function () {
+      _this.props.activateListView();
+    };
+
+    return _this;
   }
 
   _createClass(Listings, [{
     key: 'render',
     value: function render() {
+      var _this2 = this;
 
       //console.log(this.props);
+
+      var isGrid = {
+        transform: 'scale(1.4)'
+      };
+
+      var listStyle = {
+        width: '100%',
+        maxWidth: '600px'
+
+      };
 
       var listingItems = this.props.listingsData.map(function (listingItem, i) {
 
@@ -757,7 +791,7 @@ var Listings = function (_Component) {
 
         return _react2.default.createElement(
           'div',
-          { className: 'listing', key: i },
+          { className: 'listing', key: i, style: _this2.props.globalState.isGridView ? null : listStyle },
           _react2.default.createElement(
             'div',
             { className: 'listing-img', style: listingImageStyle },
@@ -893,8 +927,8 @@ var Listings = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'view' },
-              _react2.default.createElement('i', { className: 'fa fa-th-list', 'aria-hidden': 'true' }),
-              _react2.default.createElement('i', { className: 'fa fa-th', 'aria-hidden': 'true' })
+              _react2.default.createElement('i', { className: 'fa fa-th-list', 'aria-hidden': 'true', onClick: this.onListView, style: this.props.globalState.isGridView ? null : isGrid }),
+              _react2.default.createElement('i', { className: 'fa fa-th', 'aria-hidden': 'true', onClick: this.onGridView, style: this.props.globalState.isGridView ? isGrid : null })
             )
           )
         ),

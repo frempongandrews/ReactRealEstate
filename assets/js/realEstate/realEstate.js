@@ -20,12 +20,28 @@ class App extends Component {
       isGridView: true,
       isListView: false,
       sortBy: '',
+      isGridView: false,
       filteredData: listingsData
     }
 
 
 
   }
+
+
+  activateGridView = () => {
+    this.setState({
+      isGridView: true
+    })
+  }
+
+
+  activateListView = () => {
+    this.setState({
+      isGridView: false
+    })
+  }
+
 
   onInputChange = (e) => {
 
@@ -83,12 +99,6 @@ class App extends Component {
       })
 
     }
-
-
-
-
-
-
 
 
 
@@ -231,7 +241,7 @@ class App extends Component {
         <Header name='Andrews'/>
         <section id='content-area'>
           <Filter onInputChange={this.onInputChange} globalState={this.state} />
-          <Listings listingsData={this.state.filteredData} onSortBy={this.onSortBy} globalState={this.state}/>
+          <Listings listingsData={this.state.filteredData} onSortBy={this.onSortBy} globalState={this.state} activateGridView={this.activateGridView} activateListView={this.activateListView}/>
         </section>
       </div>
 
