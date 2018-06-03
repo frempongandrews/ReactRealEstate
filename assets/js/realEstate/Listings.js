@@ -152,9 +152,10 @@ export default class Listings extends Component {
           <div className='sort-options'>
 
 
-            <select name='sortby' className='sortby'>
-              <option value='price-asc'>Highest price first</option>
-              <option value='price-dsc'>Lowest price first</option>
+            <select name='sortBy' className='sortby' onChange={this.props.onSortBy}>
+              {this.props.globalState.sortBy ? null : <option value=''>sort by</option> }
+              <option value='sort_price_dsc' >Highest price first</option>
+              <option value='sort_price_asc'>Lowest price first</option>
             </select>
 
 

@@ -14,10 +14,12 @@ class App extends Component {
       min_price: 0,
       max_price: 500000,
       min_floor_space: 0,
+      max_floor_space: 2000,
       floorSpaceError: false,
       priceError: false,
       isGridView: true,
       isListView: false,
+      sortBy: '',
       filteredData: listingsData
     }
 
@@ -38,6 +40,61 @@ class App extends Component {
      this.onFloorSpaceChange();
      this.onFilterData();
    })
+
+  }
+
+  onSortBy = (e) => {
+    console.log(e.target.value);
+
+    let name = e.target.name;
+    let value = e.target.value;
+
+
+    //descending by price
+    if (value === 'sort_price_dsc') {
+
+      // console.log('****************highest first');
+
+
+      let dscSortedListings = this.state.listingsData.sort(function(a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+
+      this.setState({
+        [name]: value,
+        listingsData: dscSortedListings
+      })
+
+    }
+
+    //ascending by price
+    if (value === 'sort_price_asc') {
+
+      // console.log('****************highest first');
+
+
+      let ascSortedListings = this.state.listingsData.sort(function(a, b) {
+        return parseInt(a.price) - parseInt(b.price);
+      });
+
+      this.setState({
+        [name]: value,
+        listingsData: ascSortedListings
+      })
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
   }
 
@@ -167,14 +224,14 @@ class App extends Component {
 
   render () {
 
-    // console.log(this.state)
+     // console.log(this.state);
     return (
 
       <div>
         <Header name='Andrews'/>
         <section id='content-area'>
           <Filter onInputChange={this.onInputChange} globalState={this.state} />
-          <Listings listingsData={this.state.filteredData} />
+          <Listings listingsData={this.state.filteredData} onSortBy={this.onSortBy} globalState={this.state}/>
         </section>
       </div>
 

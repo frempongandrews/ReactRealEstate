@@ -27,7 +27,7 @@ export default class Filter extends Component {
 
           <span className='filter_by_city'>City</span>
           <select name="city" className='filters city' onChange={this.props.onInputChange}>
-            <option value=''></option>
+            <option value=''>All</option>
             <option value='Manchester'>Manchester</option>
             <option value='Liverpool'>Liverpool</option>
             <option value='London'>London</option>
@@ -37,7 +37,7 @@ export default class Filter extends Component {
 
           <span className='filter_by_housetype'>House Type</span>
           <select name='housetype' className='filters housetype' onChange={this.props.onInputChange}>
-            <option value=''></option>
+            <option value=''>All</option>
             <option value='flat'>Flat</option>
             <option value='detached'>Detached</option>
             <option value='semi_detached'>Semi-Detached</option>
@@ -48,7 +48,7 @@ export default class Filter extends Component {
 
           <span className='filter_by_numberOfBedrooms'>Bedrooms</span>
           <select name='bedrooms' className='filters bedrooms' onChange={this.props.onInputChange}>
-            <option value=''></option>
+            <option value=''>All</option>
             <option value='2'>2 Bedrooms</option>
             <option value='3'>3 Bedrooms</option>
             <option value='4'>4 Bedrooms</option>
@@ -63,7 +63,7 @@ export default class Filter extends Component {
             <span className='title'>Price</span>
             {this.props.globalState.priceError && <p className='price-error'>Min price cannot be higher than Max price</p>}
             <input type='number' name='min_price' className='min-price' placeholder='from:' value={this.props.globalState.min_price} onChange={this.props.onInputChange} />
-            <input type='number' name='max_price' className='max-price' placeholder='to:' onChange={this.props.onInputChange}/>
+            <input type='number' name='max_price' className='max-price' placeholder='to:' value={this.props.globalState.max_price} onChange={this.props.onInputChange}/>
 
           </div>
           {/*<!--end price -->*/}
@@ -74,8 +74,8 @@ export default class Filter extends Component {
 
             <span className='title'>Floor Space in ft&sup2;</span>
             {this.props.globalState.floorSpaceError && <p className='floor-space-error'>Min Floor Space cannot be higher than Max Floor Space</p>}
-            <input type='number' name='min_floor_space' className='min-floor-space' value={this.props.globalState.min_price} placeholder='from:' onChange={this.props.onInputChange}/>
-            <input type='number' name='max_floor_space' className='max-floor-space' placeholder='to:' onChange={this.props.onInputChange}/>
+            <input type='number' name='min_floor_space' className='min-floor-space' value={this.props.globalState.min_floor_space} placeholder='from:' onChange={this.props.onInputChange}/>
+            <input type='number' name='max_floor_space' className='max-floor-space' value={this.props.globalState.max_floor_space} placeholder='to:' onChange={this.props.onInputChange}/>
 
           </div>
           {/*<!--end floorspace -->*/}

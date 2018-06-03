@@ -181,6 +181,41 @@ var App = function (_Component) {
       });
     };
 
+    _this.onSortBy = function (e) {
+      console.log(e.target.value);
+
+      var name = e.target.name;
+      var value = e.target.value;
+
+      //descending by price
+      if (value === 'sort_price_dsc') {
+        var _this$setState2;
+
+        // console.log('****************highest first');
+
+
+        var dscSortedListings = _this.state.listingsData.sort(function (a, b) {
+          return parseInt(b.price) - parseInt(a.price);
+        });
+
+        _this.setState((_this$setState2 = {}, _defineProperty(_this$setState2, name, value), _defineProperty(_this$setState2, 'listingsData', dscSortedListings), _this$setState2));
+      }
+
+      //ascending by price
+      if (value === 'sort_price_asc') {
+        var _this$setState3;
+
+        // console.log('****************highest first');
+
+
+        var ascSortedListings = _this.state.listingsData.sort(function (a, b) {
+          return parseInt(a.price) - parseInt(b.price);
+        });
+
+        _this.setState((_this$setState3 = {}, _defineProperty(_this$setState3, name, value), _defineProperty(_this$setState3, 'listingsData', ascSortedListings), _this$setState3));
+      }
+    };
+
     _this.onFilterData = function () {
 
       var newData = _this.state.listingsData.filter(function (listing) {
@@ -294,10 +329,12 @@ var App = function (_Component) {
       min_price: 0,
       max_price: 500000,
       min_floor_space: 0,
+      max_floor_space: 2000,
       floorSpaceError: false,
       priceError: false,
       isGridView: true,
       isListView: false,
+      sortBy: '',
       filteredData: _ListingsData2.default
     };
 
@@ -308,7 +345,7 @@ var App = function (_Component) {
     key: 'render',
     value: function render() {
 
-      // console.log(this.state)
+      // console.log(this.state);
       return _react2.default.createElement(
         'div',
         null,
@@ -317,7 +354,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, { onInputChange: this.onInputChange, globalState: this.state }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData, onSortBy: this.onSortBy, globalState: this.state })
         )
       );
     }
@@ -391,7 +428,11 @@ var Filter = function (_Component) {
           _react2.default.createElement(
             'select',
             { name: 'city', className: 'filters city', onChange: this.props.onInputChange },
-            _react2.default.createElement('option', { value: '' }),
+            _react2.default.createElement(
+              'option',
+              { value: '' },
+              'All'
+            ),
             _react2.default.createElement(
               'option',
               { value: 'Manchester' },
@@ -421,7 +462,11 @@ var Filter = function (_Component) {
           _react2.default.createElement(
             'select',
             { name: 'housetype', className: 'filters housetype', onChange: this.props.onInputChange },
-            _react2.default.createElement('option', { value: '' }),
+            _react2.default.createElement(
+              'option',
+              { value: '' },
+              'All'
+            ),
             _react2.default.createElement(
               'option',
               { value: 'flat' },
@@ -456,7 +501,11 @@ var Filter = function (_Component) {
           _react2.default.createElement(
             'select',
             { name: 'bedrooms', className: 'filters bedrooms', onChange: this.props.onInputChange },
-            _react2.default.createElement('option', { value: '' }),
+            _react2.default.createElement(
+              'option',
+              { value: '' },
+              'All'
+            ),
             _react2.default.createElement(
               'option',
               { value: '2' },
@@ -492,7 +541,7 @@ var Filter = function (_Component) {
               'Min price cannot be higher than Max price'
             ),
             _react2.default.createElement('input', { type: 'number', name: 'min_price', className: 'min-price', placeholder: 'from:', value: this.props.globalState.min_price, onChange: this.props.onInputChange }),
-            _react2.default.createElement('input', { type: 'number', name: 'max_price', className: 'max-price', placeholder: 'to:', onChange: this.props.onInputChange })
+            _react2.default.createElement('input', { type: 'number', name: 'max_price', className: 'max-price', placeholder: 'to:', value: this.props.globalState.max_price, onChange: this.props.onInputChange })
           ),
           _react2.default.createElement(
             'div',
@@ -507,8 +556,8 @@ var Filter = function (_Component) {
               { className: 'floor-space-error' },
               'Min Floor Space cannot be higher than Max Floor Space'
             ),
-            _react2.default.createElement('input', { type: 'number', name: 'min_floor_space', className: 'min-floor-space', value: this.props.globalState.min_price, placeholder: 'from:', onChange: this.props.onInputChange }),
-            _react2.default.createElement('input', { type: 'number', name: 'max_floor_space', className: 'max-floor-space', placeholder: 'to:', onChange: this.props.onInputChange })
+            _react2.default.createElement('input', { type: 'number', name: 'min_floor_space', className: 'min-floor-space', value: this.props.globalState.min_floor_space, placeholder: 'from:', onChange: this.props.onInputChange }),
+            _react2.default.createElement('input', { type: 'number', name: 'max_floor_space', className: 'max-floor-space', value: this.props.globalState.max_floor_space, placeholder: 'to:', onChange: this.props.onInputChange })
           ),
           _react2.default.createElement(
             'div',
@@ -824,15 +873,20 @@ var Listings = function (_Component) {
             { className: 'sort-options' },
             _react2.default.createElement(
               'select',
-              { name: 'sortby', className: 'sortby' },
+              { name: 'sortBy', className: 'sortby', onChange: this.props.onSortBy },
+              this.props.globalState.sortBy ? null : _react2.default.createElement(
+                'option',
+                { value: '' },
+                'sort by'
+              ),
               _react2.default.createElement(
                 'option',
-                { value: 'price-asc' },
+                { value: 'sort_price_dsc' },
                 'Highest price first'
               ),
               _react2.default.createElement(
                 'option',
-                { value: 'price-dsc' },
+                { value: 'sort_price_asc' },
                 'Lowest price first'
               )
             ),
