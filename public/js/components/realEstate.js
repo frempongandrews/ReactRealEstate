@@ -370,7 +370,8 @@ var App = function (_Component) {
       priceError: false,
       isGridView: true,
       isListView: false,
-      sortBy: ''
+      sortBy: '',
+      searchedCity: ''
     }, _defineProperty(_this$state, 'isGridView', true), _defineProperty(_this$state, 'filteredData', _ListingsData2.default), _this$state);
 
     return _this;

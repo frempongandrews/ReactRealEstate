@@ -20,7 +20,9 @@ class App extends Component {
       isGridView: true,
       isListView: false,
       sortBy: '',
+      searchedCity: '',
       isGridView: true,
+
       filteredData: listingsData
     }
 
