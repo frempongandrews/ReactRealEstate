@@ -169,8 +169,8 @@ export default class Listings extends Component {
           <div className='sort-options'>
 
 
-            <select name='sortBy' className='sortby' onChange={this.props.onSortBy}>
-              {this.props.globalState.sortBy ? null : <option value=''>sort by</option> }
+            <select name='sortBy' className='sortby' onChange={this.props.onSortBy} ref={(select) => this.sortBtInput = select }>
+              <option value=''>sort by</option>
               <option value='sort_price_dsc' >Highest price first</option>
               <option value='sort_price_asc'>Lowest price first</option>
             </select>

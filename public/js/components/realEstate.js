@@ -178,18 +178,51 @@ var App = function (_Component) {
         return listing.city.indexOf(searchedCity.charAt(0).toUpperCase() + searchedCity.slice(1)) !== -1;
       });
 
-      _this.setState({
+      ////////code below: repetition on the other methods to render list correctly. Extrapolate to function if possible///////
+      //check if this.state.sortBy is set to render results properly
 
-        filteredData: newListingsData,
-        searchedCity: e.target.value.toLowerCase()
+      if (_this.state.sortBy === '') {
 
-      });
+        _this.setState({
 
-      // let newFilteredData = this.state.listingsData.indexOf()
-      //
-      // this.setState({
-      //   filteredData: listingsData
-      // });
+          filteredData: newListingsData,
+          searchedCity: e.target.value.toLowerCase()
+
+        });
+      }
+
+      //highest first
+      if (_this.state.sortBy === 'sort_price_dsc') {
+
+        newListingsData = newListingsData.sort(function (a, b) {
+          return parseInt(b.price) - parseInt(a.price);
+        });
+
+        _this.setState({
+
+          filteredData: newListingsData,
+          searchedCity: e.target.value.toLowerCase()
+
+        });
+      }
+
+      //lowest first
+      if (_this.state.sortBy === 'sort_price_asc') {
+
+        newListingsData = newListingsData.sort(function (a, b) {
+          return parseInt(a.price) - parseInt(b.price);
+        });
+
+        _this.setState({
+
+          filteredData: newListingsData,
+          searchedCity: e.target.value.toLowerCase()
+
+        });
+      }
+
+      ////////code above: repetition on the other methods to render list correctly. Extrapolate to function if possible///////
+
     };
 
     _this.activateGridView = function () {
@@ -223,32 +256,35 @@ var App = function (_Component) {
       var name = e.target.name;
       var value = e.target.value;
 
+      var dscSortedListings = _this.state.filteredData.sort(function (a, b) {
+        return parseInt(b.price) - parseInt(a.price);
+      });
+
       //descending by price
       if (value === 'sort_price_dsc') {
-        var _this$setState2;
 
         // console.log('****************highest first');
 
-
-        var dscSortedListings = _this.state.listingsData.sort(function (a, b) {
-          return parseInt(b.price) - parseInt(a.price);
+        _this.setState({
+          'sortBy': value,
+          filteredData: dscSortedListings
         });
-
-        _this.setState((_this$setState2 = {}, _defineProperty(_this$setState2, name, value), _defineProperty(_this$setState2, 'listingsData', dscSortedListings), _this$setState2));
       }
 
       //ascending by price
       if (value === 'sort_price_asc') {
-        var _this$setState3;
 
         // console.log('****************highest first');
 
 
-        var ascSortedListings = _this.state.listingsData.sort(function (a, b) {
+        var ascSortedListings = _this.state.filteredData.sort(function (a, b) {
           return parseInt(a.price) - parseInt(b.price);
         });
 
-        _this.setState((_this$setState3 = {}, _defineProperty(_this$setState3, name, value), _defineProperty(_this$setState3, 'listingsData', ascSortedListings), _this$setState3));
+        _this.setState({
+          sortBy: value,
+          filteredData: ascSortedListings
+        });
       }
     };
 
@@ -319,10 +355,48 @@ var App = function (_Component) {
         });
       }
 
-      //setting state to newData
-      _this.setState({
-        filteredData: newData
-      });
+      ////////code below: repetition on the other methods to render list correctly. Extrapolate to function if possible///////
+      //check if this.state.sortBy is set to render results properly
+
+      if (_this.state.sortBy === '') {
+
+        _this.setState({
+
+          filteredData: newData
+
+        });
+      }
+
+      //highest first
+      if (_this.state.sortBy === 'sort_price_dsc') {
+
+        newData = newData.sort(function (a, b) {
+          return parseInt(b.price) - parseInt(a.price);
+        });
+
+        _this.setState({
+
+          filteredData: newData
+
+        });
+      }
+
+      //lowest first
+      if (_this.state.sortBy === 'sort_price_asc') {
+
+        newData = newData.sort(function (a, b) {
+          return parseInt(a.price) - parseInt(b.price);
+        });
+
+        _this.setState({
+
+          filteredData: newData
+
+        });
+      }
+
+      ////////code above: repetition on the other methods to render list correctly. Extrapolate to function if possible///////
+      //check if this.state.sortBy is set to render results properly
     };
 
     _this.onPriceChange = function () {
@@ -931,8 +1005,10 @@ var Listings = function (_Component) {
             { className: 'sort-options' },
             _react2.default.createElement(
               'select',
-              { name: 'sortBy', className: 'sortby', onChange: this.props.onSortBy },
-              this.props.globalState.sortBy ? null : _react2.default.createElement(
+              { name: 'sortBy', className: 'sortby', onChange: this.props.onSortBy, ref: function ref(select) {
+                  return _this2.sortBtInput = select;
+                } },
+              _react2.default.createElement(
                 'option',
                 { value: '' },
                 'sort by'
