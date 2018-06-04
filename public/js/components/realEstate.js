@@ -170,6 +170,28 @@ var App = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
+    _this.onSearchCity = function (e) {
+
+      var searchedCity = e.target.value;
+
+      var newListingsData = _this.state.listingsData.filter(function (listing) {
+        return listing.city.indexOf(searchedCity.charAt(0).toUpperCase() + searchedCity.slice(1)) !== -1;
+      });
+
+      _this.setState({
+
+        filteredData: newListingsData,
+        searchedCity: e.target.value.toLowerCase()
+
+      });
+
+      // let newFilteredData = this.state.listingsData.indexOf()
+      //
+      // this.setState({
+      //   filteredData: listingsData
+      // });
+    };
+
     _this.activateGridView = function () {
       _this.setState({
         isGridView: true
@@ -349,7 +371,7 @@ var App = function (_Component) {
       isGridView: true,
       isListView: false,
       sortBy: ''
-    }, _defineProperty(_this$state, 'isGridView', false), _defineProperty(_this$state, 'filteredData', _ListingsData2.default), _this$state);
+    }, _defineProperty(_this$state, 'isGridView', true), _defineProperty(_this$state, 'filteredData', _ListingsData2.default), _this$state);
 
     return _this;
   }
@@ -358,7 +380,7 @@ var App = function (_Component) {
     key: 'render',
     value: function render() {
 
-      // console.log(this.state);
+      console.log('*****************', this.state);
       return _react2.default.createElement(
         'div',
         null,
@@ -367,7 +389,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, { onInputChange: this.onInputChange, globalState: this.state }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData, onSortBy: this.onSortBy, globalState: this.state, activateGridView: this.activateGridView, activateListView: this.activateListView })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData, onSortBy: this.onSortBy, globalState: this.state, activateGridView: this.activateGridView, activateListView: this.activateListView, onSearchCity: this.onSearchCity })
         )
       );
     }
@@ -764,7 +786,8 @@ var Listings = function (_Component) {
       //console.log(this.props);
 
       var isGrid = {
-        transform: 'scale(1.4)'
+        transform: 'scale(1.4)',
+        transition: 'all 0.6s ease'
       };
 
       var listStyle = {
@@ -886,7 +909,7 @@ var Listings = function (_Component) {
         _react2.default.createElement(
           'section',
           { className: 'search-area' },
-          _react2.default.createElement('input', { type: 'text', name: 'search', placeholder: 'Search...' })
+          _react2.default.createElement('input', { type: 'text', name: 'search', placeholder: 'Search by city...', onChange: this.props.onSearchCity, value: this.props.globalState.searchedCity })
         ),
         this.props.listingsData.length < 1 && _react2.default.createElement(
           'p',

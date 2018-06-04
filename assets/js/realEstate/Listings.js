@@ -43,7 +43,8 @@ export default class Listings extends Component {
     //console.log(this.props);
 
     let isGrid = {
-      transform: 'scale(1.4)'
+      transform: 'scale(1.4)',
+      transition: 'all 0.6s ease'
     }
 
     let listStyle = {
@@ -152,7 +153,7 @@ export default class Listings extends Component {
 
 
         <section className='search-area'>
-          <input type='text' name='search' placeholder='Search...'/>
+          <input type='text' name='search' placeholder='Search by city...' onChange={this.props.onSearchCity} value={this.props.globalState.searchedCity}/>
         </section>
 
 

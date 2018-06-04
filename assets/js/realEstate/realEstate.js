@@ -20,11 +20,36 @@ class App extends Component {
       isGridView: true,
       isListView: false,
       sortBy: '',
-      isGridView: false,
+      isGridView: true,
       filteredData: listingsData
     }
 
 
+
+  }
+
+  onSearchCity = (e) => {
+
+    let searchedCity = e.target.value;
+
+    let newListingsData = this.state.listingsData.filter((listing) => {
+      return listing.city.indexOf(searchedCity.charAt(0).toUpperCase() + searchedCity.slice(1)) !== -1;
+    });
+
+
+    this.setState({
+
+      filteredData: newListingsData,
+      searchedCity: e.target.value.toLowerCase()
+
+    });
+
+
+    // let newFilteredData = this.state.listingsData.indexOf()
+    //
+    // this.setState({
+    //   filteredData: listingsData
+    // });
 
   }
 
@@ -99,12 +124,6 @@ class App extends Component {
       })
 
     }
-
-
-
-
-
-
 
   }
 
@@ -234,14 +253,14 @@ class App extends Component {
 
   render () {
 
-     // console.log(this.state);
+    console.log('*****************',this.state);
     return (
 
       <div>
         <Header name='Andrews'/>
         <section id='content-area'>
           <Filter onInputChange={this.onInputChange} globalState={this.state} />
-          <Listings listingsData={this.state.filteredData} onSortBy={this.onSortBy} globalState={this.state} activateGridView={this.activateGridView} activateListView={this.activateListView}/>
+          <Listings listingsData={this.state.filteredData} onSortBy={this.onSortBy} globalState={this.state} activateGridView={this.activateGridView} activateListView={this.activateListView} onSearchCity={this.onSearchCity}/>
         </section>
       </div>
 
