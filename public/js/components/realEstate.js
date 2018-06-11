@@ -243,7 +243,7 @@ var App = function (_Component) {
       var value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
 
       _this.setState(_defineProperty({}, name, value), function () {
-        console.log(_this.state);
+        //console.log(this.state);
         _this.onPriceChange();
         _this.onFloorSpaceChange();
         _this.onFilterData();

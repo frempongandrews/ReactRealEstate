@@ -114,7 +114,7 @@ class App extends Component {
      [name]: value,
 
    }, () => {
-     console.log(this.state);
+     //console.log(this.state);
      this.onPriceChange();
      this.onFloorSpaceChange();
      this.onFilterData();
@@ -334,7 +334,7 @@ class App extends Component {
 
   render () {
 
-    console.log('*****************',this.state);
+    //console.log('*****************',this.state);
     return (
 
       <div>
